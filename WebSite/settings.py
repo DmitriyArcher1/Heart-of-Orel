@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-z#n4f(&x+5vt8v1_@-jq8(86od!*laztvwh=6%ow@2g_b7h36v
 # ПРЕДУПРЕЖДЕНИЕ БЕЗОПАСНОСТИ: не запускайте с включенной отладкой в ​​рабочей среде!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] # допустимые хосты, на которых может работать приложение.
+# '*' - означает, что приложение может работать на любом хосте.
 
 
 # Определение приложения
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'WebSite.wsgi.application'
+WSGI_APPLICATION = 'WebSite.wsgi.application' # протокол работы wsgi
 
 
 # База данных
@@ -103,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Интернационализация
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -116,6 +119,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static' # указываю путь к общей static для всего проекта в корневой директории
+    ]
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media/' # хранилище изображений, чтобы django нашёл их
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 # Тип поля первичного ключа по умолчанию
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
