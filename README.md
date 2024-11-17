@@ -5,6 +5,7 @@ ___________________________________________________________________________
 Development team: Selin Dmitry, Anisimov Kirill, Grigoryan Mikhail.
 
 Information collection team: Shokhina Evgenia, Grigoryants Amalia.
+
 We are 1st year students, group 41PIfm (Applied Informatics) of the Faculty of Physics and Mathematics of the Oryol State University named after I.S. Turgenev.
 
 [RUS] - Данный сайт посвящён достопримечательностям города Орла, Российской Федерации. На нём будет показана основная информация о них, фотографии и прочее. Ожидаются дополнения в будущем.
@@ -12,6 +13,7 @@ We are 1st year students, group 41PIfm (Applied Informatics) of the Faculty of P
 Команда разработки: Селин Дмитрий, Анисимов Кирилл, Григорьян Михаил.
 
 Команда по сбору информации: Шохина Евгения, Григорьянц Амалия.
+
 Мы являемся студентами 1 курса, группы 41ПИфм(Прикладная информатика) физико-математического факультета Орловского государственного университета имени И.С Тургенева.
 
 # EMAIL Селина Дмитрия: d.kartrajt@gmail.com
