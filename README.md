@@ -8,7 +8,7 @@ The site is being developed by: Selin Dmitry, Anisimov Kirill, Grigoryan Mikhail
 
 # EMAIL Селина Дмитрия: d.kartrajt@gmail.com
 # EMAIL Анисимова Кирилла: 
-# EMAIL Григорьяна Михаила: mishagreegorian@gmail.com
+# EMAIL Григорьяна Михаила: 
 ________________________________________________________________________________
 
 # Здесь будут отображаться версии сайта по мере его разработки!
