@@ -1,24 +1,18 @@
-/*
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
-
 var settings = {
 
 	banner: {
 
-		// Indicators (= the clickable dots at the bottom).
+		// Индикаторы (= кликабельные точки внизу).
 			indicators: true,
 
-		// Transition speed (in ms)
-		// For timing purposes only. It *must* match the transition speed of "#banner > article".
+		// Скорость перехода (в мс)
+		// Только для целей синхронизации. Она *должна* соответствовать скорости перехода «#баннер > статья».
 			speed: 1500,
 
-		// Transition delay (in ms)
+		// Задержка перехода (в мс)
 			delay: 5000,
 
-		// Parallax intensity (between 0 and 1; higher = more intense, lower = less intense; 0 = off)
+		// Интенсивность параллакса (от 0 до 1; выше = более интенсивно, ниже = менее интенсивно; 0 = выключено)
 			parallax: 0.25
 
 	}
@@ -36,7 +30,7 @@ var settings = {
 	});
 
 	/**
-	 * Applies parallax scrolling to an element's background image.
+	 * Применяет параллаксную прокрутку к фоновому изображению элемента.
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn._parallax = (skel.vars.browser == 'ie' || skel.vars.mobile) ? function() { return $(this) } : function(intensity) {
@@ -111,8 +105,8 @@ var settings = {
 	};
 
 	/**
-	 * Custom banner slider for Slate.
-	 * @return {jQuery} jQuery object.
+	 * Пользовательский слайдер баннеров для Slate.
+	 * @return {jQuery} jQuery объект.
 	 */
 	$.fn._slider = function(options) {
 
@@ -131,7 +125,7 @@ var settings = {
 
 		}
 
-		// Vars.
+		// Переменные.
 			var	current = 0, pos = 0, lastPos = 0,
 				slides = [], indicators = [],
 				$indicators,
@@ -140,11 +134,11 @@ var settings = {
 				isLocked = false,
 				i = 0;
 
-		// Turn off indicators if we only have one slide.
+		// Отключите индикаторы, если у нас только один слайд.
 			if ($slides.length == 1)
 				options.indicators = false;
 
-		// Functions.
+		// Функции.
 			$this._switchTo = function(x, stop) {
 
 				if (isLocked || pos == x)
@@ -155,23 +149,23 @@ var settings = {
 				if (stop)
 					window.clearInterval(intervalId);
 
-				// Update positions.
+				// Обновление позиций.
 					lastPos = pos;
 					pos = x;
 
-				// Hide last slide.
+				// Скрываем последний слайд.
 					slides[lastPos].removeClass('top');
 
 					if (options.indicators)
 						indicators[lastPos].removeClass('visible');
 
-				// Show new slide.
+				// Показываем новый слайд.
 					slides[pos].addClass('visible').addClass('top');
 
 					if (options.indicators)
 						indicators[pos].addClass('visible');
 
-				// Finish hiding last slide after a short delay.
+				// Завершаем скрытие последнего слайда после небольшой задержки.
 					window.setTimeout(function() {
 
 						slides[lastPos].addClass('instant').removeClass('visible');
@@ -187,38 +181,38 @@ var settings = {
 
 			};
 
-		// Indicators.
+		// Индикаторы.
 			if (options.indicators)
 				$indicators = $('<ul class="indicators"></ul>').appendTo($this);
 
-		// Slides.
+		// Слайды.
 			$slides
 				.each(function() {
 
 					var $slide = $(this),
 						$img = $slide.find('img');
 
-					// Slide.
+					// Слайд.
 						$slide
 							.css('background-image', 'url("' + $img.attr('src') + '")')
 							.css('background-position', ($slide.data('position') ? $slide.data('position') : 'center'));
 
-					// Add to slides.
+					// Добавление к слайдам.
 						slides.push($slide);
 
-					// Indicators.
+					// Индикаторы.
 						if (options.indicators) {
 
 							var $indicator_li = $('<li>' + i + '</li>').appendTo($indicators);
 
-							// Indicator.
+							// Индикатор.
 								$indicator_li
 									.data('index', i)
 									.on('click', function() {
 										$this._switchTo($(this).data('index'), true);
 									});
 
-							// Add to indicators.
+							// Добавление к индикаторам.
 								indicators.push($indicator_li);
 
 						}
@@ -228,17 +222,17 @@ var settings = {
 				})
 				._parallax(options.parallax);
 
-		// Initial slide.
+		// Инициализация слайда.
 			slides[pos].addClass('visible').addClass('top');
 
 			if (options.indicators)
 				indicators[pos].addClass('visible');
 
-		// Bail if we only have a single slide.
+		// Залог, если у нас есть только один слайд.
 			if (slides.length == 1)
 				return;
 
-		// Main loop.
+		// Основной цикл.
 			intervalId = window.setInterval(function() {
 
 				current++;
@@ -259,7 +253,7 @@ var settings = {
 			$header 	= $('#header'),
 			$banner 	= $('.banner');
 
-		// Disable animations/transitions until the page has loaded.
+		// Отключаем анимацию/переходы, пока страница не загрузится.
 			$body.addClass('is-loading');
 
 			$window.on('load', function() {
@@ -268,7 +262,7 @@ var settings = {
 				}, 100);
 			});
 
-		// Prioritize "important" elements on medium.
+		// Расставляем приоритеты «важных» элементов на носителе.
 			skel.on('+medium -medium', function() {
 				$.prioritize(
 					'.important\\28 medium\\29',
@@ -276,10 +270,10 @@ var settings = {
 				);
 			});
 
-		// Banner.
+		// Баннер.
 			$banner._slider(settings.banner);
 
-		// Menu.
+		// Меню.
 			$('#menu')
 				.append('<a href="#menu" class="close"></a>')
 				.appendTo($body)
@@ -292,7 +286,7 @@ var settings = {
 					side: 'right'
 				});
 
-		// Header.
+		// Заголовок.
 			if (skel.vars.IEVersion < 9)
 				$header.removeClass('alt');
 
