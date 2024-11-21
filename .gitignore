@@ -9,5 +9,5 @@ cache/
 .idea
 
 # django stuff
-db.sqlite3/
+db.sqlite3
 media/
