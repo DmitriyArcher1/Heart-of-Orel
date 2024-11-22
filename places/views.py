@@ -3,12 +3,13 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
-class AboutView(TemplateView):
-    template_name = 'about/about.html'
+class PlacesView(TemplateView):
+    template_name = 'places/places.html'
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        context['title'] = 'О нас'
+
+        context['title'] = 'Малоизвестные места'
         context['content_title'] = ''
         context['content_text'] = ''
 
