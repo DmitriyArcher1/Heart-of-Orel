@@ -60,6 +60,17 @@
 		box-sizing: border-box;
 	}
 
+	.animation {
+		opacity: 0;
+		transform: translateY(50px);
+		transition: opacity 0.5s, transform 0.5s;
+	}
+
+	.show {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
 /* Containers */
 
 	.container {
