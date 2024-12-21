@@ -2,11 +2,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
-/*
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
 
 /* Reset */
 
@@ -59,6 +54,22 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+
+	.animation{
+		opacity: 0;
+		transform: translateY(50px);
+		transition: opacity 0.5s, transform 0.5s;
+	}
+
+	.show {
+		opacity: 1;
+    	transform: translateY(0);
+	}
+
+	/* .button-anim {
+		
+	} */
+
 
 /* Containers */
 

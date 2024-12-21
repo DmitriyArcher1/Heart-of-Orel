@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="{% static "css/main.css" %}">
 
 		{% comment %} Иконка {% endcomment %}
-		<link rel="icon" href="{% static "icons/icon2.png" %}">
+		<link rel="icon" href="{% static "icons/icon6.png" %}">
 	</head>
 	<body>
 
@@ -87,7 +87,7 @@
 					<div class="grid-style">
 
 						<div>
-							<div class="box">
+							<div class="box animation">
 								<div class="image fit">
 									<img src="{% static "images/pic02.jpg" %}" alt="" width="600" height="300"></div>
 								<div class="content">
@@ -95,14 +95,14 @@
 										<h2>Какое-то место в Орле</h2>
 									</header><p>Более расширение описание и бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</p>
 									<footer class="align-center">
-										<a href="#" class="button alt">Подробнее</a>
+										<a href="#" class="button alt button-anim">Подробнее</a>
 									</footer>
 								</div>
 							</div>
 						</div>
 
 						<div>
-							<div class="box">
+							<div class="box animation">
 								<div class="image fit">
 									<img src="{% static "images/pic03.jpg" %}" alt="" width="600" height="300"></div>
 								<div class="content">
@@ -122,7 +122,7 @@
 
 			<!-- Two -->
 			 <section id="two" class="wrapper style3">
-				<div class="inner">
+				<div class="inner animation">
 					<header class="align-center">
 						<p>Какое-то краткое описание об этой инфе</p>
 						<h2>ПРОМЕЖУТОЧНАЯ ИНФА</h2>
@@ -133,28 +133,28 @@
 			<!-- Three -->
 			 <section id="three" class="wrapper style2">
 				<div class="inner">
-					<header class="align-center">
+					<header class="align-center animation">
 						<p class="special">Какое-то краткое описание о этих местах</p>
 						<h2>ЗАГОЛОВОК О МЕСТАХ ОРЛА</h2>
 					</header>
 					<div class="gallery">
 						<div>
-							<div class="image fit">
+							<div class="image fit animation">
 								<a href="#"><img src="{% static "images/pic01.jpg" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
-							<div class="image fit">
+							<div class="image fit animation">
 								<a href="#"><img src="{% static "images/pic02.jpg" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
-							<div class="image fit">
+							<div class="image fit animation">
 								<a href="#"><img src="{% static "images/pic03.jpg" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
-							<div class="image fit">
+							<div class="image fit animation">
 								<a href="#"><img src="{% static "images/pic04.jpg" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
@@ -182,5 +182,6 @@
 		<script src="{% static "js/skel.min.js" %}"></script>
 		<script src="{% static "js/util.js" %}"></script>
 		<script src="{% static "js/main.js" %}"></script>
+		<script src="{% static "js/animation.js" %}"></script>
 	</body>
 </html>
