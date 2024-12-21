@@ -28,9 +28,9 @@
 		<!-- Nav -->
 		<nav id="menu">
 			<ul class="links">
-				<li><a href="{% url "main:index" %}">Главная</a></li>
-				<li><a href="{% url "about:about" %}">О нас</a></li>
-                <li><a href="{% url "places:places" %}">Малоизвестные места</a></li>
+				<li><a href="{% url "main:index" %}"><i class="fa-solid fa-house"></i>   Главная</a></li>
+				<li><a href="{% url "about:about" %}"><i class="fa-solid fa-user"></i>   О нас</a></li>
+				<li><a href="{% url "places:places" %}"><i class="fa-solid fa-map-location"></i>    Малоизвестные места</a></li>
 			</ul>
 		</nav>
 
@@ -49,7 +49,7 @@
 					<div class="content">
 						<header class="align-center">
 							<p>Heart of Orel</p>
-							<h2>Подборка таких мест</h2>
+							<h2>Ниже представлена подборка малозвестных мест города Орла. <br> <br> Листай ниже 👇</h2>
 						</header>
 						
 					</div>
@@ -87,7 +87,7 @@
                                 <header class="align-center"><p>Химмашевский пруд, расположенный в районе Знаменки</p>
                                     <h2>Химмашевский пруд</h2>
                                 </header>
-                                <p>Пруд малоизвестен, который расположен рядом с заводом</p>
+                                <p>Пруд малоизвестен. Расположен рядом с заводом Химмаш</p>
                                 <footer class="align-center"><a href="#" class="button alt">Подробнее</a>
                                 </footer>
                             </div>
@@ -155,5 +155,6 @@
 			<script src="{% static "js/util.js" %}"></script>
 			<script src="{% static "js/main.js" %}"></script>
             <script src="{% static "js/animation.js" %}"></script>
+            <script src="https://kit.fontawesome.com/c6ba37b0b2.js" crossorigin="anonymous"></script>
 	</body>
 </html>

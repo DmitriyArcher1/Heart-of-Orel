@@ -23,9 +23,9 @@
 			<!-- Nav -->
 			 <nav id="menu">
 				<ul class="links">
-					<li><a href="{% url "main:index" %}">Главная</a></li>
-					<li><a href="{% url "about:about" %}">О нас</a></li>
-					<li><a href="{% url "places:places" %}">Малоизвестные места</a></li>
+					<li><a href="{% url "main:index" %}"><i class="fa-solid fa-house"></i>   Главная</a></li>
+					<li><a href="{% url "about:about" %}"><i class="fa-solid fa-user"></i>   О нас</a></li>
+					<li><a href="{% url "places:places" %}"><i class="fa-solid fa-map-location"></i>    Малоизвестные места</a></li>
 				</ul>
 			</nav>
 			
@@ -183,5 +183,6 @@
 		<script src="{% static "js/util.js" %}"></script>
 		<script src="{% static "js/main.js" %}"></script>
 		<script src="{% static "js/animation.js" %}"></script>
+		<script src="https://kit.fontawesome.com/c6ba37b0b2.js" crossorigin="anonymous"></script>
 	</body>
 </html>
