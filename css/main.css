@@ -3120,6 +3120,16 @@
 			position: relative;
 		}
 
+		.wrapper.style4 {
+			background-color: #5c5b5b;
+			color: #bfbfbf;
+			background-image: url(../images/bg1.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
 			.wrapper.style3 input, .wrapper.style3 select, .wrapper.style3 textarea {
 				color: #ffffff;
 			}
