@@ -1,3 +1,7 @@
+ul {
+    list-style: none;
+}
+
 body {
     font-family: "Montserrat", serif;
 }
@@ -10,63 +14,27 @@ body {
 .navigate_place {
     font-size: 40px;
     text-decoration: none;
-    transition: font-size 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .navigate_place:hover {
+    color: #6085ff;
     font-size: 45px;
     cursor: pointer;
 }
 
-/* .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.info-text {
+    text-align: center;
 }
 
-.thumbnail {
-    width: 200px; 
-    height: auto;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.modal {
-    display: none;
-    position: fixed;  
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8);
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-  }
-  
-.modal-content {
-    display: block;
-    max-width: 90%;
-    max-height: 90%;
-    animation-name: zoom;
-    animation-duration: 0.4s;
-    
-}
-
-.close {
-    color: #fff;
-    position: absolute;
-    top: 10px;
-    right: 25px;
+.info-text h2 {
     font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
+    
+    transition: all 0.2s ease-in;
 }
-  
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-} */
-  
+
+.info-text h2:hover {
+    font-size: 37px;
+    cursor: pointer;
+    color: #6085ff;
+}
