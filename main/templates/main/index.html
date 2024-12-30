@@ -7,10 +7,18 @@
 		<meta charset="utf-8">
 		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		{% comment %} Таблицы стилей {% endcomment %}
 		<link rel="stylesheet" href="{% static "css/main.css" %}">
+        <link rel="stylesheet" href="{% static "css/index.css" %}">
 
-		{% comment %} Иконка {% endcomment %}
-		<link rel="icon" href="{% static "icons/icon6.png" %}">
+        {% comment %} Иконка {% endcomment %}
+        <link rel="icon" href="{% static "icons/icon6.png" %}">
+
+        {% comment %} Шрифт {% endcomment %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
@@ -95,7 +103,7 @@
 										<h2>Какое-то место в Орле</h2>
 									</header><p>Более расширение описание и бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</p>
 									<footer class="align-center">
-										<a href="#" class="button alt button-anim">Подробнее</a>
+										<a href="#" class="button alt button-anim">Подробнее <i class="fa-solid fa-angles-right"></i></a>
 									</footer>
 								</div>
 							</div>
@@ -110,7 +118,7 @@
 										<h2>Какое-то место в Орле</h2>
 									</header><p>Более расширение описание и бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</p>
 									<footer class="align-center">
-										<a href="#" class="button alt">Подробнее</a>
+										<a href="#" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
 									</footer>
 								</div>
 							</div>
@@ -165,15 +173,16 @@
 			<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-					<ul class="icons"><li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<ul class="icons">
+						{% comment %} <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li> {% endcomment %}
 						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 					</ul>
 				</div>
 			</footer>
 			<div class="copyright">
-				Heart Of Orel - DevTeam.
+				&copy; Heart Of Orel - DevTeam. All Rights Reserved
 			</div>
 
 		<!-- Scripts -->
