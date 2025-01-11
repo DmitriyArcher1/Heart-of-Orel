@@ -45,8 +45,8 @@ ___Версия 1.0.0 -- Version 1.0.0___
 </div>
 
 <h1>
-    Крупное обновление 2025
-    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWFwN3E3bmc3ejByZzE2Ymx6ejV2Z3NoMnM2OTY4dTlzeWk5N3pjbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n7b7PjSOZJwVCmY/giphy.gif" width="30px" />
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWFwN3E3bmc3ejByZzE2Ymx6ejV2Z3NoMnM2OTY4dTlzeWk5N3pjbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n7b7PjSOZJwVCmY/giphy.gif" width="30px" /> Крупное обновление 2025:
+    
 </h1>
 
 <h2>
