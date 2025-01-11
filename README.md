@@ -39,3 +39,11 @@ ___Версия 1.0.0 -- Version 1.0.0___
 2) Исправлены мелкие баги в скрипте анимации при скролле страницы.
 3) Добавлены карточки малоизвестных мест в городе Орёл.
 4) В боковом меню добавлены три иконки.
+
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;">
+<iframe src="https://giphy.com/embed/78XCFBGOlS6keY1Bil" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
+</iframe>
+</div>
+<p>
+<a href="https://giphy.com/gifs/PizzaNinjas-programmer-pizza-ninjas-pizzaninjas-78XCFBGOlS6keY1Bil">via GIPHY</a>
+</p>
