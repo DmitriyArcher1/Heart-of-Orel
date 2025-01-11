@@ -1,0 +1,20 @@
+.error-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.title_avtoris {
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'main',
     'about',
     'places',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -80,8 +81,12 @@ WSGI_APPLICATION = 'WebSite.wsgi.application' # протокол работы ws
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'heart',
+        'USER': 'heart',
+        'PASSWORD': 'ytrhfitdbx',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -126,7 +131,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static' # указываю путь к общей static для всего проекта в корневой директории
     ]
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/' # хранилище изображений, чтобы django нашёл их
 
 INTERNAL_IPS = [
@@ -137,3 +142,4 @@ INTERNAL_IPS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'users.User' # переопределение модели пользователей в базе данных

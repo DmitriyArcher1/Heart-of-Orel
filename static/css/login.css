@@ -1,0 +1,168 @@
+body {
+    font-family: "Montserrat", serif;
+    background-image: url(../images/bg1.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.registration-container,
+.login-container { 
+    background-color: #fff; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.title:hover {
+    color:#23477e;
+    cursor: pointer;
+}
+
+.sub_title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Сделали надписи темнее */
+}
+
+input[type="text"],
+input[type="first_name"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+.btn {
+    background-color: #23477e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #051330;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+.success-message {
+    color: #5cb85c;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.button_signup {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button_signup a {
+    text-decoration: none;
+    color: #23477e;
+    border: 2px solid #23477e;
+    padding: 5px 20px;
+    font-size: 18px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.button_signup a:hover {
+    background-color: #23477e;
+    color: #fff;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px; /* Добавили отступ снизу */
+}
+
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+}
+
+
+.success {
+    background-color: #369239; /* Зеленый */
+}
+
+.message-success {
+    font-size: 20px;
+}
+
+.message-errors {
+    font-size: 20px;
+}
+
+.error {
+    background-color: #992f27; /* Красный */
+}
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .message-container {
+        width: 95%;
+        gap: 15px;
+    }
+    .message {
+        padding: 15px;
+    }
+}

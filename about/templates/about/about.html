@@ -28,11 +28,23 @@
 		</header>
 		
 		<!-- Nav -->
-		 <nav id="menu">
+		<nav id="menu">
 			<ul class="links">
 				<li><a href="{% url "main:index" %}"><i class="fa-solid fa-house"></i>   Главная</a></li>
 				<li><a href="{% url "about:about" %}"><i class="fa-solid fa-user"></i>   О нас</a></li>
 				<li><a href="{% url "places:places" %}"><i class="fa-solid fa-map-location"></i>    Малоизвестные места</a></li>
+
+				{% if user.is_admin or user.is_staff %}
+					<li><a href="{% url "admin:index" %}"><i class="fa-solid fa-screwdriver-wrench"></i>    Админ панель</a></li>
+				{% endif %}
+
+				{% if not user.is_authenticated %}
+					<li><a href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i>    Войти</a></li>
+				{% else %}
+					<li><a href="{% url "users:profile" %}"><i class="fa-solid fa-user"></i>    Профиль</a></li>
+					<li><a href="{% url "users:logout" %}"><i class="fa-solid fa-person-running"></i>    Выйти из аккаунта</a></li>
+				{% endif %}
+
 			</ul>
 		</nav>
 		

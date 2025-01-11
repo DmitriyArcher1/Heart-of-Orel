@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    {% comment %} Таблица стилей {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="{% static "css/main.css" %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static "css/registration.css" %}">
+
+    {% comment %} Иконка {% endcomment %}
+    <link rel="icon" href="{% static "icons/icon6.png" %}">
+
+    {% comment %} Шрифт {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+    <body>
+        
+        <div class="registration-container">
+            <a href="{% url "main:index" %}" class="title">Heart Of Orel</a>
+            <h2>Регистрация</h2>
+            <form id="registration-form" action="{% url "users:registration" %}" method="post">
+                
+                {% csrf_token %}
+    
+                <div class="form-group">
+                    <label for="id_first_name">Имя*</label>
+                    <input type="text" id="id_first_name"
+                        value="{% if form.first_name.value %}{{ form.first_name.value }}{% endif %}"
+                        name="first_name" 
+                        placeholder="Введите имя" 
+                        required>
+
+                        {% if form.first_name.errors %}
+                            <span class="error-message" id="first_name-error">{{ form.first_name.errors }}</span>
+                        {% endif %}
+                </div>
+    
+                <div class="form-group">
+                    <label for="id_last_name">Фамилия*</label>
+                    <input type="text" id="id_last_name"
+                        value="{% if form.last_name.value %}{{ form.last_name.value }}{% endif %}"
+                        name="last_name" 
+                        placeholder="Введите фамилию" 
+                        required>
+
+                        {% if form.id_last_name.errors %}
+                            <span class="error-message" id="last_name-error">{{ form.id_last_name.errors }}</span>
+                        {% endif %}
+                </div>
+    
+                <div class="form-group">
+                    <label for="id_username">Имя пользователя*</label>
+                    <input type="text" id="id_username"
+                        value="{% if form.username.value %}{{ form.username.value }}{% endif %}" 
+                        name="username" 
+                        placeholder="Введите имя пользователя" 
+                        required>
+
+                        {% if form.username.errors %}
+                            <span class="error-message" id="username-error">{{ form.username.errors }}</span>
+                        {% endif %}
+                </div>
+    
+                <div class="form-group">
+                    <label for="id_email">Email*</label>
+                    <input type="email" id="id_email"
+                        value="{% if form.email.value %}{{ form.email.value }}{% endif %}"
+                        name="email" 
+                        placeholder="Введите email" 
+                        required>
+                        
+                        {% if form.email.errors %}
+                            <span class="error-message" id="email-error">{{ form.email.errors }}</span>
+                        {% endif %}
+                </div>
+    
+                <div class="form-group">
+                    <label for="id_password1">Пароль*</label>
+                    <input type="password" id="id_password1"
+                        value="{% if form.password1.value %}{{ form.password1.value }}{% endif %}"
+                        name="password1" 
+                        placeholder="Введите пароль" 
+                        required>
+
+                        {% if form.password1.errors %}
+                            <span class="error-message" id="password-error">{{ form.password1.errors }}</span>
+                        {% endif %}
+                </div>
+    
+                <div class="form-group">
+                    <label for="id_password2">Подтверждение пароля*</label>
+                    <input type="password" id="id_password2"
+                        value="{% if form.password2.value %}{{ form.password2.value }}{% endif %}"
+                        name="password2" 
+                        placeholder="Подтвердите пароль" 
+                        required>
+
+                        {% if form.password2.errors %}
+                            <span class="error-message" id="confirm-password-error">{{ form.password2.errors }}</span>
+                        {% endif %}
+                </div>
+
+    
+                <button type="submit" class="btn">Зарегистрироваться</button>
+            </form>
+    
+            {% comment %} <div id="success-message" class="success-message" style="display: none;">
+                Регистрация прошла успешно!
+            </div> {% endcomment %}
+            
+        </div>
+    
+    
+        {% comment %} <script src="script.js"></script> {% endcomment %}
+        <script src="{% static "js/message.js" %}"></script>
+        
+
+    </body>
+
+
+</html>

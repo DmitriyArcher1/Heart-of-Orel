@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    {% comment %} Таблицы стилей {% endcomment %}
+    <link rel="stylesheet" href="{% static "css/login.css" %}">
+    <link rel="stylesheet" href="{% static "css/errors.css" %}">
+
+    {% comment %} Иконка {% endcomment %}
+    <link rel="icon" href="{% static "icons/icon6.png" %}">
+
+    {% comment %} Шрифт {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container">
+        <a href="{% url "main:index" %}" class="title">Heart Of Orel</a>
+        <h2 class="sub_title">Авторизация</h2>
+
+        <form action="{% url "users:login" %}" method="post">
+
+            {% csrf_token %}
+
+            {% comment %} {% if form.non_field_errors %}
+                <p>{{ form.non_field_errors }}</p>
+            {% endif %} {% endcomment %}
+
+            {% if form.non_field_errors %}
+                <div class="error-container">
+                    <h2 class="title_avtoris">Ошибка авторизации</h2>
+                    <p class="error-message">{{ form.non_field_errors }}</p>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label for="id_username">Имя пользователя</label>
+                <input type="text" id="id_username"
+                    value="{% if form.username.value %}{{ form.username.value }}{% endif %}"  
+                    name="username"
+                    placeholder="Введите имя пользователя"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="id_password">Пароль</label>
+                <input type="password" id="id_password" 
+                    name="password" 
+                    placeholder="Введите пароль" 
+                    required>
+            </div>
+
+            <button type="submit" class="btn">Войти</button>
+
+            <div class="button_signup">
+                <a href="{% url "users:registration" %}">Создать аккаунт</a>
+            </div>
+        </form>
+
+        
+        
+
+    </div>
+    
+    {% comment %} <script src="{% static "js/login.js" %}"></script> {% endcomment %}
+    <script src="{% static "js/message.js" %}"></script>
+    
+</body>
+</html>

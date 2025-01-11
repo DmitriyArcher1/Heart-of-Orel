@@ -1,0 +1,161 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    {% comment %} Таблицы стилей {% endcomment %}
+    <link rel="stylesheet" href="{% static "css/profile.css" %}">
+    
+
+    {% comment %} Иконка {% endcomment %}
+    <link rel="icon" href="{% static "icons/icon6.png" %}">
+
+    {% comment %} Шрифт {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+
+    <div class="container">
+
+        <div class="message-container">
+            {% if messages %}
+    
+                {% for message in messages %}
+                    {% if message.tags == 'success' %}
+                        <div class="message-container">
+                            <div id="notification" class="message success">
+                                <p class="message-success">{{ message }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if message.tags == 'warning' %}
+                        <div class="message-container">
+                            <div id="notification" class="message error">
+                                <p class="message-error">{{ message }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+        
+            {% endif %}
+        </div>
+
+        <div>
+            <a class="title_site" href="{% url "main:index" %}">Heart Of Orel</a>
+        </div>
+
+        <div class="profile-card">
+
+            
+
+            <div class="profile-info">
+                <h1 class="title">Мой профиль</h1>
+
+                <form action="{% url "users:profile" %}" method="post" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <div class="form-group">
+
+                        {% if user.image %}
+                            <div class="avatar-container">
+                                <img id="avatar" src="{{ user.image.url }}" alt='Аватар пользователя'>
+                            </div>
+                        {% else %}
+                            <div class="avatar-container">
+                                <img id="avatar" src="{% static "images/base-avatar.jpg" %}">
+                            </div>
+                        {% endif %}
+
+                        <div class="avatar-container">
+                            <label for="id_image" class="avatar-upload-button">Изменить аватар</label>
+                            <input type="file" 
+                                id="id_image" 
+                                name="image"
+                                accept="image/*"
+                                style="display: none;">
+
+                                {% if form.image.errors %}
+                                    <span class="error-message" id="image-error">{{ form.image.errors }}</span>
+                                {% endif %}
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_first_name">Имя*</label>
+                        <input type="text" id="id_first_name" 
+                            name="first_name"
+                            placeholder="Введите ваше имя"
+                            value="{{ form.first_name.value }}" 
+                            required>
+
+                            {% if form.first_name.errors %}
+                                <span class="error-message" id="first_name-error">{{ form.first_name.errors }}</span>
+                            {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_last_name">Фамилия*</label>
+                        <input type="text" id="id_last_name" 
+                            name="last_name"
+                            placeholder="Введите вашу фамилию"
+                            value="{{ form.last_name.value }}" 
+                            required>
+
+                            {% if form.first_name.errors %}
+                                <span class="error-message" id="last_name-error">{{ form.last_name.errors }}</span>
+                            {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_username">Имя пользователя*</label>
+                        <input type="text" id="id_username" 
+                            name="username"
+                            placeholder="Введите имя своего пользователя"
+                            value="{{ form.username.value }}" 
+                            required>
+
+                            {% if form.username.errors %}
+                                <span class="error-message" id="username-error">{{ form.username.errors }}</span>
+                            {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_email">Email*</label>
+                        <input type="email" id="id_email" 
+                            name="email"
+                            placeholder="Введите email"
+                            value="{{ form.email.value }}" 
+                            required>
+
+                            {% if form.email.errors %}
+                                <span class="error-message" id="email-error">{{ form.email.errors }}</span>
+                            {% endif %}
+                    </div>
+
+                    <button type="submit" class="save-button">Сохранить изменения</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static "js/jquery.min.js" %}"></script>
+	<script src="{% static "js/jquery.scrollex.min.js" %}"></script>
+	<script src="{% static "js/skel.min.js" %}"></script>
+	<script src="{% static "js/util.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>
+	<script src="{% static "js/animation.js" %}"></script>
+	<script src="https://kit.fontawesome.com/c6ba37b0b2.js" crossorigin="anonymous"></script>
+    <script src="{% static "js/profile.js" %}"></script>
+    <script src="{% static "js/message.js" %}"></script>
+</body>
+</html>
