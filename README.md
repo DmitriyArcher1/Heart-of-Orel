@@ -50,7 +50,7 @@ ___Версия 1.0.0 -- Version 1.0.0___
 </h1>
 
 <h2>
-    Что же изменилось?
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDJvZXcwcW5ndXlweW05NzMwcm1hODdhdjc1eXR2YTRjaXBwYzFzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tn33aiTi1jkl6H6/giphy.gif" width="30px" /> Что же изменилось?
     <hr>
     <ul>
         <li>На сайт была добавлена регистрация, авторизация и личный профиль пользователя.
