@@ -41,5 +41,5 @@ ___Версия 1.0.0 -- Version 1.0.0___
 4) В боковом меню добавлены три иконки.
 
 <div id="header" align="center">
-    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXFiaXgwdzgwcmlveWc4ZTIxNW5iamViemtiMGYzM21iNjRvODN1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif" width="100" />
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXFiaXgwdzgwcmlveWc4ZTIxNW5iamViemtiMGYzM21iNjRvODN1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif" width="500" />
 </div>
