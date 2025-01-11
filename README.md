@@ -55,7 +55,9 @@ ___Версия 1.0.0 -- Version 1.0.0___
         <li>На сайт была добавлена регистрация, авторизация и личный профиль пользователя.
         <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGx6YWttMTFyY21lY2hrMGQyZG14c3Z6N2dpcnUwaWRvcm02a2FvciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A06UFEx8jxEwU/giphy.gif" width="30px" />
         </li>
+        <hr>
         <li>Весь сайт был перенесён на новую базу данных. С dbsqlite3 на PostgreSQL. <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGx6YWttMTFyY21lY2hrMGQyZG14c3Z6N2dpcnUwaWRvcm02a2FvciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A06UFEx8jxEwU/giphy.gif" width="30px" /></li>
+        <hr>
         <li>Проведена оптимизация базы данных и подготовка к следующему этапу в разработке. <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGx6YWttMTFyY21lY2hrMGQyZG14c3Z6N2dpcnUwaWRvcm02a2FvciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A06UFEx8jxEwU/giphy.gif" width="30px" /></li>
     </ul>
 </h2>
