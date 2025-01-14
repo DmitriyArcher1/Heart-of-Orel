@@ -17,7 +17,7 @@ class PlacesView(TemplateView):
     
 
 class FirstPlaceView(TemplateView):
-    template_name = 'first_place.html'
+    template_name = 'places/first_place.html'
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
