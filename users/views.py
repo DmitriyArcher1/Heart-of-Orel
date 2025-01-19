@@ -45,7 +45,7 @@ def registration(request) -> HttpResponseRedirect | HttpResponse:
             form.save()
             user = form.instance
             auth.login(request, user)
-            messages.success(request, f"{user.username}, Вы успешно зарегестрировались и  вошли в систему")
+            messages.success(request, f"{user.username}, Вы успешно зарегистрировались и  вошли в систему")
             return HttpResponseRedirect(reverse('main:index'))
     else:
         form = UserRegistrationForm()
