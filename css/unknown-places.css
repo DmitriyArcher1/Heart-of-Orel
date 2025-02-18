@@ -1,0 +1,30 @@
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Montserrat", serif;
+}
+
+.place-title {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.navigate_place {
+    font-size: 40px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.info-text {
+    text-align: center;
+}
+
+.info-text h2 {
+    font-size: 35px;
+    
+    transition: all 0.2s ease-in;
+}
