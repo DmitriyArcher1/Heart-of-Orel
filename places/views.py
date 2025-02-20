@@ -27,3 +27,39 @@ class FirstPlaceView(TemplateView):
         context['content_text'] = ''
 
         return context
+
+class SecondPlace(TemplateView):
+    template_name = 'places/second_place.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['title'] = 'Химмашевский пруд'  
+        context['content_title'] = ''
+        context['content_text'] = ''
+
+        return context
+    
+class ThirdPlace(TemplateView):
+    template_name = 'places/third_place.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['title'] = 'Сабуровская крепость'
+        context['content_title'] = ''
+        context['content_text'] = ''
+
+        return context
+
+class FourthPlace(TemplateView):
+    template_name = 'places/fourth_place.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['title'] = 'Река Неполодь'
+        context['content_title'] = ''
+        context['content_text'] = ''
+
+        return context
