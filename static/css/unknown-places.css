@@ -27,3 +27,20 @@ body {
     
     transition: all 0.2s ease-in;
 }
+
+.comment-button {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #5c0ccb;
+    border-radius: 40px;
+    font-weight: 900;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.comment-button:hover {
+    background-color: #2f0b61;
+}

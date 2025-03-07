@@ -51,3 +51,14 @@ class ProfileForm(UserChangeForm):
     last_name = forms.CharField()
     username = forms.CharField()
     email = forms.CharField()
+
+
+class CommentsForm(UserChangeForm):
+
+    class Meta:
+        model = User
+        fields = (
+            "first_name",
+        )
+
+        first_name = forms.CharField()

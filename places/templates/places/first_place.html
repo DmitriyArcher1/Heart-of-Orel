@@ -10,7 +10,7 @@
 
         <!-- Таблица стилей -->
         <link rel="stylesheet" href="{% static "css/main.css" %}">
-        <link rel="stylesheet" href="{% static "css/first_place.css" %}">
+        <link rel="stylesheet" href="{% static "css/unknown-places.css" %}">
 
         <!-- Иконка -->
         <link rel="icon" href="{% static "icons/icon6.png" %}">
@@ -109,7 +109,7 @@
             <div class="inner animation">
                 
                 <header class="align-center animation">
-                    <h2><span class="navigate_place">Фотографии</span></h2>
+                    <h2><span class="navigate_place" style="font-weight: 900; color: #fff;">Фотографии</span></h2>
                 </header>
 
                 <div class="container">
@@ -148,17 +148,17 @@
             <div class="inner">
                 <div class="content">
                     <ul class="info-text">
-                        <h2 class="animation"><li>Работает круглосуточно
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Работает круглосуточно
                             <i class="fa-solid fa-clock"></i>
                         </li></h2>
                         <hr class="animation" size="2" width="100%">
 
-                        <h2 class="animation"><li>Вблизи к заводу "Химтекстильмаш"
+                        <h2 class="animation" style="font-size: 31px; font-weight: 900; color: #fff;"><li>Вблизи к заводу "Химтекстильмаш"
                             <i class="fa-solid fa-industry"></i>
                         </li></h2>
                         <hr class="animation">
 
-                        <h2 class="animation"><li>Имеет оценку 4,6 
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Имеет оценку 4,6 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
@@ -167,20 +167,44 @@
                         </li></h2>
                         <hr class="animation">
 
-                        <h2 class="animation"><li>С хорошими отзывами
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>С хорошими отзывами
                             <i class="fa-solid fa-thumbs-up"></i>
                         </li></h2>
                     </ul>
                 </div>
             </div>
         </section>
-
         
         <!-- Пятая секция -->
+
+        {% if user.is_authenticated %}
+            <section id="four" class="wrapper style2">
+                <div class="inner2">
+                    <div class="content animation">
+                        {% comment %} <h2 style="text-align: center;"><span class="navigate_place">Написать отзыв</span></h2> {% endcomment %}
+                        <a class="comment-button" href="{% url "users:first_comments" %}">Написать отзыв</a>
+                    </div>
+                </div>
+            </section>
+        {% else %}
+            <section id="four" class="wrapper style2">
+                <div class="inner2">
+                    <div class="content animation">
+                        {% comment %} <h2 style="text-align: center;"><span class="navigate_place">Написать отзыв</span></h2> {% endcomment %}
+                        <h1 style="color: #fff; cursor: pointer;" class="comment-button" href="{% url "users:first_comments" %}">Написать отзыв</h1>
+                        <h1 style="color: #fff; font-weight: 900; text-align: center; font-size: 25px;"><span style="color: red;">!</span> Отзывы могут писать только авторизованные пользователи <span style="color: red;">!</span></h1>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        
+
+        
+        <!-- Шестая секция -->
         <section id="four" class="wrapper style2">
             <div class="inner">
                 <div class="content animation">
-                    <h2 style="text-align: center;"><span class="navigate_place">Расположение</span></h2>
+                    <h2 style="text-align: center; font-weight: 900; color: #fff;"><span class="navigate_place">Расположение</span></h2>
                 </div>
             </div>
         </section>
