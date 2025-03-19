@@ -2694,6 +2694,11 @@
 			width: 80rem;
 		}
 
+		.wrapper > .inner2 {
+			margin: 0 auto;
+			width: 24rem;
+		}
+
 		.wrapper.style1 {
 			background-color: #8a4680;
 			color: #e2d1df;
@@ -2913,9 +2918,9 @@
 				color: #000;
 			}
 
-			.wrapper.style2 a {
-				color: #8a4680;
-			}
+			/* .wrapper.style2 a {
+				color: #000;
+			} */
 
 			.wrapper.style2 strong, .wrapper.style2 b {
 				color: #000;

@@ -9,4 +9,6 @@ urlpatterns = [
     path('second_place/', views.SecondPlace.as_view(), name = 'second_place'),
     path('third_place/', views.ThirdPlace.as_view(), name = 'third_place'),
     path('fourth_place/', views.FourthPlace.as_view(), name = 'fourth_place'),
+
+    # path('comments/tankers/', views.FirstComments.as_view(), name = 'first_comments'),
 ]

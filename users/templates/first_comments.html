@@ -1,0 +1,213 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+
+        <!-- Таблица стилей -->
+        <link rel="stylesheet" href="{% static "css/main.css" %}">
+        <link rel="stylesheet" href="{% static "css/unknown-places.css" %}">
+        <link rel="stylesheet" href="{% static "css/comments.css" %}">
+
+        <!-- Иконка -->
+        <link rel="icon" href="{% static "icons/icon6.png" %}">
+
+        <!-- Шрифт -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body class="subpage">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <a href="{% url "main:index" %}">Heart Of Orel</a>
+            </div>
+            
+            <a href="#menu">Меню</a>
+        </header>
+
+        <!-- Меню -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="{% url "main:index" %}"><i class="fa-solid fa-house"></i>   Главная</a></li>
+                <li><a href="{% url "about:about" %}"><i class="fa-solid fa-user"></i>   О нас</a></li>
+                <li><a href="{% url "places:places" %}"><i class="fa-solid fa-map-location"></i>    Малоизвестные места</a></li>
+
+                {% if user.is_admin or user.is_staff %}
+                    <li><a href="{% url "admin:index" %}"><i class="fa-solid fa-screwdriver-wrench"></i>    Админ панель</a></li>
+                {% endif %}
+
+                {% if not user.is_authenticated %}
+                    <li><a href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i>    Войти</a></li>
+                {% else %}
+                    <li><a href="{% url "users:profile" %}"><i class="fa-solid fa-user"></i>    Профиль</a></li>
+                    <li><a href="{% url "users:logout" %}"><i class="fa-solid fa-person-running"></i>    Выйти из аккаунта</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+
+        <!-- Первая секция -->
+        <section id="One" class="wrapper style4">
+            <div class="inner">
+                <header class="align-center">
+                    <p>Heart Of Orel</p>
+                    <h1 class="place-title">Отзывы</h1>
+                    <h2 class="place-title" style="font-size: 40px;font-weight: 800;color: #f0c9ff">Памятник танкистам</h2>
+                </header>
+            </div>
+        </section>
+
+        <!-- Вторая секция -->
+        <section id="two" class="wrapper style2">
+            <div class="inner">
+                <header class="align-center">
+                    <h2 style="color: #fff; font-weight: 900; font-size: 45px;">Оставить комментарий</h2>
+                    <p style="color: #fff; font-weight: 900; font-size: 25px;">Поделитесь своим мнением о памятнике!</p>
+                </header>
+        
+                <div class="form-wrapper">
+                    <form method="post" action="{% url "users:first_comments" %}" id="comment-form">
+                        {% csrf_token %}
+                        <div class="row">
+
+                            <div style="display: flex; align-items: flex-start;"> 
+                                {% if user.image %}
+                                    <div class="avatar-container">
+                                        <img id="avatar" src="{{ user.image.url }}" alt='Аватар пользователя'>
+                                    </div>
+                                {% else %}
+                                    <div class="avatar-container">
+                                        <img id="avatar" src="{% static "images/base-avatar.jpg" %}">
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div>
+                                <label for="id_first_name"></label>
+                                <input type="text" id="id_first_name"
+                                name="first_name" 
+                                placeholder="Имя" 
+                                value="{{ form.first_name.value }}"
+                                required
+                                />
+                                
+                                {% if form.first_name.errors %}
+                                    <span class="error-message" id="first_name-error">{{ form.first_name.errors }}</span>
+                                {% endif %}
+                                
+                            </div>
+
+                            <div class="col-12">
+                                <textarea name="message" id="message" placeholder="Ваш комментарий" rows="6"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Отправить" class="special" /></li>
+                                    <li><input type="reset" value="Очистить" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="two" class="wrapper style2">
+            <div class="inner">
+                <div class="comment">
+                    <div class="comment-avatar">
+                        
+                    </div>
+
+                    <div class="comment-content">
+
+                        <div class="comment-author">
+                            Дмитрий
+                        </div>
+
+                        <div class="comment-text">
+                            Это место просто замечательное! Оно мне очень нравится.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">
+                        
+                    </div>
+
+                    <div class="comment-content">
+
+                        <div class="comment-author">
+                            Дмитрий
+                        </div>
+
+                        <div class="comment-text">
+                            Это место просто замечательное! Оно мне очень нравится.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">
+                        
+                    </div>
+
+                    <div class="comment-content">
+
+                        <div class="comment-author">
+                            Дмитрий
+                        </div>
+
+                        <div class="comment-text">
+                            Это место просто замечательное! Оно мне очень нравится.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+        </section>
+
+        
+
+        <!-- Footer -->
+		<footer id="footer">
+            <div class="container">
+                <ul class="icons">
+                    {% comment %} <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li> {% endcomment %}
+                    <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+        </footer>
+        
+        <div class="copyright">
+            &copy; Heart Of Orel - DevTeam. Все права защищены.
+        </div>
+
+        <!-- Scripts -->
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/jquery.scrollex.min.js" %}"></script>
+		<script src="{% static "js/skel.min.js" %}"></script>
+		<script src="{% static "js/util.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+        <script src="{% static "js/animation.js" %}"></script>
+        <script src="{% static "js/modal_window.js" %}"></script>
+		<script src="https://kit.fontawesome.com/c6ba37b0b2.js" crossorigin="anonymous"></script>
+
+    
+    </body>
+
+</html>
