@@ -28,4 +28,5 @@ urlpatterns = [
     path('', include('about.urls', namespace = 'about')),
     path('places/', include('places.urls', namespace = 'places')),
     path('user/', include('users.urls', namespace = 'user')),
+    path('comments/', include('comment.urls', namespace = 'comment')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

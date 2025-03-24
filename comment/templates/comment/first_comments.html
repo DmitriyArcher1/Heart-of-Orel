@@ -75,7 +75,7 @@
                 </header>
         
                 <div class="form-wrapper">
-                    <form method="post" action="{% url "users:first_comments" %}" id="comment-form">
+                    <form method="post" action="{% url "comment:comments" %}" id="comment-form">
                         {% csrf_token %}
                         <div class="row">
 
@@ -92,9 +92,9 @@
                             </div>
 
                             <div>
-                                <label for="id_first_name"></label>
-                                <input type="text" id="id_first_name"
-                                name="first_name" 
+                                <label for="id_author"></label>
+                                <input type="text" id="id_author"
+                                name="author" 
                                 placeholder="Имя" 
                                 value="{{ user.username }}"
                                 required
@@ -108,7 +108,7 @@
                             </div>
 
                             <div class="col-12">
-                                <textarea name="message" id="message" placeholder="Ваш комментарий" rows="6"></textarea>
+                                <textarea name="text" id="id_text" required placeholder="Ваш комментарий" rows="6"></textarea>
                             </div>
                             <div class="col-12">
                                 <ul class="actions">

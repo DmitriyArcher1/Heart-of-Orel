@@ -10,7 +10,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, TemplateView, UpdateView
 from django.core.cache import cache
 
-from users.forms import UserLoginForm, UserRegistrationForm, ProfileForm, CommentsForm
+from users.forms import UserLoginForm, UserRegistrationForm, ProfileForm
 from users.models import User
 
 
@@ -82,16 +82,16 @@ def logout(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect:
 
     return redirect(reverse('main:index'))
 
-@login_required
-def first_comments(request):
-    form = CommentsForm(instance = request.user)
+# @login_required
+# def first_comments(request):
+#     form = CommentsForm(instance = request.user)
 
-    context = {
-        'title': 'Отзывы',
-        'form': form,
-    }
+#     context = {
+#         'title': 'Отзывы',
+#         'form': form,
+#     }
 
-    return render(request, 'first_comments.html', context)
+#     return render(request, 'first_comments.html', context)
 
 # class UserRegistrationForm(TemplateView):
 #     template_name= 'registration.html'
