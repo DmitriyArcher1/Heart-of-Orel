@@ -96,8 +96,9 @@
                                 <input type="text" id="id_first_name"
                                 name="first_name" 
                                 placeholder="Имя" 
-                                value="{{ form.first_name.value }}"
+                                value="{{ user.username }}"
                                 required
+                                readonly
                                 />
                                 
                                 {% if form.first_name.errors %}
@@ -111,7 +112,7 @@
                             </div>
                             <div class="col-12">
                                 <ul class="actions">
-                                    <li><input type="submit" value="Отправить" class="special" /></li>
+                                    <button type="submit">Отправить</button>
                                     <li><input type="reset" value="Очистить" /></li>
                                 </ul>
                             </div>
@@ -124,51 +125,41 @@
         <section id="two" class="wrapper style2">
             <div class="inner">
                 <div class="comment">
-                    <div class="comment-avatar">
-                        
+                    <div style="padding: 4px;">
+                        {% if user.image %}
+                            <div class="avatar-container">
+                                <img id="avatar" src="{{ user.image.url }}" alt='Аватар пользователя'>
+                            </div>
+                        {% else %}
+                            <div class="avatar-container">
+                                <img id="avatar" src="{% static "images/base-avatar.jpg" %}">
+                            </div>
+                        {% endif %}
                     </div>
 
                     <div class="comment-content">
 
-                        <div class="comment-author">
-                            Дмитрий
-                        </div>
+                        {% if user.is_superuser %}
+                            <div class="comment-author" style="color: red;">
+                                (Админ)
+                                {{ user.username }}
+                            </div>
+                        {% else %}
+                            <div class="comment-author">
+                                {{ user.username }}
+                            </div>
+                        {% endif %}
 
                         <div class="comment-text">
                             Это место просто замечательное! Оно мне очень нравится.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-avatar">
-                        
-                    </div>
-
-                    <div class="comment-content">
-
-                        <div class="comment-author">
-                            Дмитрий
-                        </div>
-
-                        <div class="comment-text">
                             Это место просто замечательное! Оно мне очень нравится.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-avatar">
-                        
-                    </div>
-
-                    <div class="comment-content">
-
-                        <div class="comment-author">
-                            Дмитрий
-                        </div>
-
-                        <div class="comment-text">
+                            Это место просто замечательное! Оно мне очень нравится.
+                            Это место просто замечательное! Оно мне очень нравится.
+                            Это место просто замечательное! Оно мне очень нравится.
+                            Это место просто замечательное! Оно мне очень нравится.
+                            Это место просто замечательное! Оно мне очень нравится.
+                            Это место просто замечательное! Оно мне очень нравится.
+                            Это место просто замечательное! Оно мне очень нравится.
                             Это место просто замечательное! Оно мне очень нравится.
                         </div>
                     </div>

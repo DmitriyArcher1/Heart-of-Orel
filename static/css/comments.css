@@ -31,7 +31,16 @@
    resize: vertical; /* Разрешить вертикальное изменение размера */
 }
 
-#comment-form input[type="submit"],
+#comment-form button[type="submit"] {
+   background-color: rgba(138, 43, 226, 0.8); /* Фиолетовый цвет кнопки */
+   color: white;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1rem;
+   transition: background-color 0.3s ease;
+}
 #comment-form input[type="reset"] {
    background-color: rgba(138, 43, 226, 0.8); /* Фиолетовый цвет кнопки */
    color: white;
