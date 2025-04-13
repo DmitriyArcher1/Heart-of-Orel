@@ -101,8 +101,8 @@
                                 readonly
                                 />
                                 
-                                {% if form.first_name.errors %}
-                                    <span class="error-message" id="first_name-error">{{ form.first_name.errors }}</span>
+                                {% if user.username.errors %}
+                                    <span class="error-message" id="first_name-error">{{ user.username.errors }}</span>
                                 {% endif %}
                                 
                             </div>
@@ -121,7 +121,8 @@
                 </div>
             </div>
         </section>
-
+        
+        {% comment %} <!-- Комментарий -->
         <section id="two" class="wrapper style2">
             <div class="inner">
                 <div class="comment">
@@ -168,6 +169,46 @@
 
             
             
+        </section> {% endcomment %}
+
+        <section id="two" class="wrapper style2">
+            <div class="inner">
+                {% if comments %}
+                    {% for comment in comments %}
+                        <div class="comment">
+                            <div style="padding: 4px;">
+                                {% if comment.user.image %}
+                                    <div class="avatar-container">
+                                        <img id="avatar" src="{{ comment.user.image.url }}" alt="Аватар пользователя">
+                                    </div>
+                                {% else %}
+                                    <div class="avatar-container">
+                                        <img id="avatar" src="{% static "images/base-avatar.jpg" %}">
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="comment-content">
+                                {% if comment.user.is_superuser %}
+                                    <div class="comment-author" style="color: red;">
+                                        (Админ)
+                                        {{ comment.author }}
+                                    </div>
+                                {% else %}
+                                    <div class="comment-author">
+                                        {{ comment.author }}
+                                    </div>
+                                {% endif %}
+                                <div class="comment-text">
+                                    {{ comment.text }} 
+                                </div>
+                                <div class="comment-date">
+                                    {{ comment.created_at|date:"d.m.Y H:i" }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
         </section>
 
         

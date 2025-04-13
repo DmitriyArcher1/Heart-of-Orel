@@ -15,6 +15,7 @@ from comment.models import Comment
 
 @login_required
 def first_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
+    comments = Comment.objects.all() # получение всех комментариев из базы данных
     if request.method == 'POST':
         form = CommentForm(data = request.POST)
 
@@ -26,8 +27,8 @@ def first_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedir
 
             return redirect(reverse('comment:comments'))
         else:
-            return render(request, 'comment/first_comments.html', {'form': form, 'title': 'Отзывы'})
+            return render(request, 'comment/first_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы'})
     
     else:
         form = CommentForm()
-        return render(request, 'comment/first_comments.html', {'form': form, 'title': 'Отзывы'})
+        return render(request, 'comment/first_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы'})
