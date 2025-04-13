@@ -61,7 +61,7 @@
                 <header class="align-center">
                     <p>Heart Of Orel</p>
                     <h1 class="place-title">Отзывы</h1>
-                    <h2 class="place-title" style="font-size: 40px;font-weight: 800;color: #f0c9ff">Памятник танкистам</h2>
+                    <h2 class="place-title" style="font-size: 40px;font-weight: 800;color: #f0c9ff">Химмашевский пруд</h2>
                 </header>
             </div>
         </section>
@@ -71,11 +71,11 @@
             <div class="inner">
                 <header class="align-center">
                     <h2 style="color: #fff; font-weight: 900; font-size: 45px;">Оставить комментарий</h2>
-                    <p style="color: #fff; font-weight: 900; font-size: 25px;">Поделитесь своим мнением о памятнике!</p>
+                    <p style="color: #fff; font-weight: 900; font-size: 25px;">Поделитесь своим мнением об этом пруде!</p>
                 </header>
         
                 <div class="form-wrapper">
-                    <form method="post" action="{% url "comment:first_comments" %}" id="comment-form">
+                    <form method="post" action="{% url "comment:second_comments" %}" id="comment-form">
                         {% csrf_token %}
                         <div class="row">
 
@@ -157,7 +157,7 @@
                                 </div>
                                 
                                 {% if user.is_superuser or user == comment.author %}
-                                    <a class="comment-delete__button" href="{% url 'comment:delete_first_comment' comment.id %}">Удалить комментарий</a>
+                                    <a class="comment-delete__button" href="{% url 'comment:delete_second_comment' comment.id %}">Удалить комментарий</a>
                                 {% endif %}
 
                                 <div class="comment-date">

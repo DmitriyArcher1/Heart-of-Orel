@@ -1,6 +1,6 @@
 from django import forms
 
-from comment.models import Comment
+from comment.models import Comment, SecondComment
 
 class CommentForm(forms.Form):
 
@@ -11,5 +11,17 @@ class CommentForm(forms.Form):
             'author',
         )
     
+    text = forms.CharField()
+    author = forms.CharField()
+
+class SecondCommentForm(forms.Form):
+
+    class Meta:
+        model = SecondComment
+        fields = (
+            'text',
+            'author',
+        )
+
     text = forms.CharField()
     author = forms.CharField()

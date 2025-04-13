@@ -120,7 +120,7 @@
             <div class="inner animation">
                 
                 <header class="align-center animation">
-                    <h2><span class="navigate_place">Фотографии</span></h2>
+                    <h2><span class="navigate_place" style="font-weight: 900; color: #fff;">Фотографии</span></h2>
                 </header>
 
                 <div class="container">
@@ -159,11 +159,12 @@
         </section>
 
 
+        <!-- Четвёртая секция -->
         <section id="four" class="wrapper style2">
             <div class="inner">
                 <div class="content">
                     <ul class="info-text">
-                        <h2 class="animation"><li>Колония животных из 30 пар
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Колония животных из 30 пар
                             <i class="fa-solid fa-shield-dog"></i>
                         </li></h2>
                     </ul>
@@ -171,7 +172,7 @@
                     <hr>
 
                     <ul class="info-text">
-                        <h2 class="animation"><li>Площадь всего парка 49га
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Площадь всего парка 49га
                             <i class="fa-solid fa-square"></i>
                         </li></h2>
                     </ul>
@@ -179,7 +180,7 @@
                     <hr>
 
                     <ul class="info-text">
-                        <h2 class="animation"><li>Свободное для посещения
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Свободное для посещения
                             <i class="fa-brands fa-free-code-camp"></i>
                         </li></h2>
                     </ul>
@@ -187,20 +188,42 @@
                     <hr>
 
                     <ul class="info-text">
-                        <h2 class="animation"><li>Любимое место местных жителей
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Любимое место местных жителей
                             <i class="fa-solid fa-heart"></i>
                         </li></h2>
                     </ul>
                 </div>
             </div>
         </section>
-
         
         <!-- Пятая секция -->
+        {% if user.is_authenticated %}
+            <section id="four" class="wrapper style2">
+                <div class="inner2">
+                    <div class="content animation">
+                        {% comment %} <h2 style="text-align: center;"><span class="navigate_place">Написать отзыв</span></h2> {% endcomment %}
+                        <a class="comment-button" href="{% url "comment:second_comments" %}">Написать отзыв</a>
+                    </div>
+                </div>
+            </section>
+        {% else %}
+            <section id="four" class="wrapper style2">
+                <div class="inner2">
+                    <div class="content animation">
+                        {% comment %} <h2 style="text-align: center;"><span class="navigate_place">Написать отзыв</span></h2> {% endcomment %}
+                        <h1 style="color: #fff; cursor: pointer;" class="comment-button" href="{% url "comment:second_comments" %}">Написать отзыв</h1>
+                        <h1 style="color: #fff; font-weight: 900; text-align: center; font-size: 25px;"><span style="color: red;">!</span> Отзывы могут писать только авторизованные пользователи <span style="color: red;">!</span></h1>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+
+        
+        <!-- Шестая секция -->
         <section id="five" class="wrapper style2">
             <div class="inner">
                 <div class="content animation">
-                    <h2 style="text-align: center;"><span class="navigate_place">Расположение</span></h2>
+                    <h2 style="text-align: center;"><span class="navigate_place" style="font-weight: 900; color: #fff;">Расположение</span></h2>
                 </div>
             </div>
         </section>
@@ -223,7 +246,10 @@
         </footer>
         
         <div class="copyright">
-            &copy; Heart Of Orel - DevTeam. Все права защищены.
+            Сайт разработали: <br> 
+            Apex Team<br>
+            {% comment %} <hr style="border: 1px solid #0c000c; width: 50%; margin: 20px 25% 20px 25%;"> {% endcomment %}
+            &copy; 2025 Все права защищены.
         </div>
 
         <!-- Scripts -->
