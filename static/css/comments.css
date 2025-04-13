@@ -1,142 +1,161 @@
 #comment-form {
-    /* Светлый фон с фиолетовым оттенком */
-   padding: 20px;
-   border-radius: 10px;
-   margin-top: 20px;
+   /* Светлый фон с фиолетовым оттенком */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 #comment-form input[type="text"],
 #comment-form input[type="email"],
 #comment-form textarea {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 15px;
-   border: 1px solid rgba(75, 0, 130, 0.3); /* Фиолетовый цвет границы */
-   border-radius: 5px;
-   background-color: rgba(240, 240, 255, 0.7);
-   color: #333;
-   font-family: 'Montserrat', sans-serif;
-   font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(75, 0, 130, 0.3); /* Фиолетовый цвет границы */
+  border-radius: 5px;
+  background-color: rgba(240, 240, 255, 0.7);
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
 }
 
 #comment-form input[type="text"]:focus,
 #comment-form input[type="email"]:focus,
 #comment-form textarea:focus {
-   border-color: rgba(138, 43, 226, 0.7); /* Более яркий фиолетовый при фокусе */
-   outline: none;
-   box-shadow: 0 0 5px rgba(138, 43, 226, 0.5); /* Тень при фокусе */
+  border-color: rgba(138, 43, 226, 0.7); /* Более яркий фиолетовый при фокусе */
+  outline: none;
+  box-shadow: 0 0 5px rgba(138, 43, 226, 0.5); /* Тень при фокусе */
 }
 
 #comment-form textarea {
-   resize: vertical; /* Разрешить вертикальное изменение размера */
+  resize: vertical; /* Разрешить вертикальное изменение размера */
 }
 
 #comment-form button[type="submit"] {
-   background-color: rgba(138, 43, 226, 0.8); /* Фиолетовый цвет кнопки */
-   color: white;
-   border: none;
-   border-radius: 20px;
-   cursor: pointer;
-   font-family: 'Montserrat', sans-serif;
-   font-size: 1rem;
-   transition: background-color 0.3s ease;
+  background-color: rgba(138, 43, 226, 0.8); /* Фиолетовый цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 #comment-form input[type="reset"] {
-   background-color: rgba(138, 43, 226, 0.8); /* Фиолетовый цвет кнопки */
-   color: white;
-   border: none;
-   border-radius: 20px;
-   cursor: pointer;
-   font-family: 'Montserrat', sans-serif;
-   font-size: 1rem;
-   transition: background-color 0.3s ease;
+  background-color: rgba(138, 43, 226, 0.8); /* Фиолетовый цвет кнопки */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 #comment-form input[type="submit"]:hover {
-   background-color: rgba(75, 0, 130, 0.9); /* Более темный фиолетовый при наведении */
+  background-color: rgba(75, 0, 130, 0.9); /* Более темный фиолетовый при наведении */
 }
 
 #comment-form input[type="reset"] {
-   background-color: rgba(70, 130, 180, 0.7); /* Синий цвет для кнопки очистки */
+  background-color: rgba(70, 130, 180, 0.7); /* Синий цвет для кнопки очистки */
 }
 
 #comment-form input[type="reset"]:hover {
-   background-color: rgba(70, 130, 180, 0.9);
+  background-color: rgba(70, 130, 180, 0.9);
 }
 
 #comment-form .actions {
-   list-style: none;
-   padding: 0;
-   margin: 0;
-   /* display: flex; */
-   /* justify-content: flex-start; */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* display: flex; */
+  /* justify-content: flex-start; */
 }
 
 #comment-form .actions li {
-   margin-left: 10px;
+  margin-left: 10px;
 }
 
 /* Добавлено для адаптивности */
 .col-6 {
-   width: 50%;
-   float: left;
-   padding-right: 10px;
+  width: 50%;
+  float: left;
+  padding-right: 10px;
 }
 
 .col-12 {
-   width: 100%;
-   float: left;
+  width: 100%;
+  float: left;
 }
 
 /* Для маленьких экранов (адаптивность) */
 @media screen and (max-width: 768px) {
-   .col-6 {
-       width: 100%;
-       padding-right: 0;
-   }
+  .col-6 {
+      width: 100%;
+      padding-right: 0;
+  }
 }
 
 /* Аватарка */
 #avatar {
-   width: 70px;
-   height: 70px;
-   border-radius: 50%;
-   object-fit: cover;
-   margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 /* Форма отправленного комментария */
 .comment {
-   background-color: #e7d8ff;
-   border-radius: 26px;
-   display: flex;
-   padding: 15px;
+  background-color: #e7d8ff;
+  border-radius: 26px;
+  display: flex;
+  padding: 15px;
 
-   margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .comment-avatar {
-   width: 50px;
-   height: 50px;
-   background-color: #000; /* Черный аватар */
-   border-radius: 50%;
-   margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: #000; /* Черный аватар */
+  border-radius: 50%;
+  margin-right: 15px;
 }
 
 .comment-content {
-   flex-grow: 1;
+  flex-grow: 1;
 }
 
 .comment-author {
-   color: #6400ff;
-   font-weight: bold;
-   margin-bottom: 5px;
+  color: #6400ff;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .comment-text {
-   background-color: #a25eff;
-   color: #fff; /* Белый текст */
-   padding: 5px;
-   border-radius: 5px;
+  background-color: #a25eff;
+  color: #fff; /* Белый текст */
+  padding: 5px;
+  border-radius: 5px;
 }
 
+.comment-delete__button {
+   display: flex;
+   justify-content: space-between;
+   text-decoration: none;
+   color: #a25eff;
+   
+
+   margin-top: 5px;
+   width: 210px;
+   padding: 2px 5px 2px 5px;
+
+   transition: all 0.2s linear;
+}
+
+.comment-delete__button:hover {
+   border-radius: 40px;
+   background: #a25eff;
+   color: #fff;
+}

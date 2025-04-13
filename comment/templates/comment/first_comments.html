@@ -155,6 +155,11 @@
                                 <div class="comment-text">
                                     {{ comment.text }} 
                                 </div>
+                                
+                                {% if user.is_superuser or user == comment.author %}
+                                    <a class="comment-delete__button" href="{% url 'comment:delete_comment' comment.id %}">Удалить комментарий</a>
+                                {% endif %}
+
                                 <div class="comment-date">
                                     {{ comment.created_at|date:"d.m.Y H:i" }}
                                 </div>
