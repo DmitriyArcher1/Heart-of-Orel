@@ -122,64 +122,17 @@
             </div>
         </section>
         
-        {% comment %} <!-- Комментарий -->
-        <section id="two" class="wrapper style2">
-            <div class="inner">
-                <div class="comment">
-                    <div style="padding: 4px;">
-                        {% if user.image %}
-                            <div class="avatar-container">
-                                <img id="avatar" src="{{ user.image.url }}" alt='Аватар пользователя'>
-                            </div>
-                        {% else %}
-                            <div class="avatar-container">
-                                <img id="avatar" src="{% static "images/base-avatar.jpg" %}">
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="comment-content">
-
-                        {% if user.is_superuser %}
-                            <div class="comment-author" style="color: red;">
-                                (Админ)
-                                {{ user.username }}
-                            </div>
-                        {% else %}
-                            <div class="comment-author">
-                                {{ user.username }}
-                            </div>
-                        {% endif %}
-
-                        <div class="comment-text">
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                            Это место просто замечательное! Оно мне очень нравится.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            
-        </section> {% endcomment %}
-
+        
         <section id="two" class="wrapper style2">
             <div class="inner">
                 {% if comments %}
                     {% for comment in comments %}
+
                         <div class="comment">
                             <div style="padding: 4px;">
-                                {% if comment.user.image %}
+                                {% if comment.avatar_url %}
                                     <div class="avatar-container">
-                                        <img id="avatar" src="{{ comment.user.image.url }}" alt="Аватар пользователя">
+                                        <img id="avatar" src="{{ comment.avatar_url }}" alt="Аватар пользователя">
                                     </div>
                                 {% else %}
                                     <div class="avatar-container">
@@ -187,8 +140,9 @@
                                     </div>
                                 {% endif %}
                             </div>
+
                             <div class="comment-content">
-                                {% if comment.user.is_superuser %}
+                                {% if comment.author.is_superuser %}
                                     <div class="comment-author" style="color: red;">
                                         (Админ)
                                         {{ comment.author }}
@@ -206,6 +160,7 @@
                                 </div>
                             </div>
                         </div>
+
                     {% endfor %}
                 {% endif %}
             </div>
