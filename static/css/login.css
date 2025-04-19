@@ -165,4 +165,9 @@ input[type="password"]:focus {
     .message {
         padding: 15px;
     }
+
+    .registration-container,
+    .login-container { 
+        width: 290px;
+    }
 }

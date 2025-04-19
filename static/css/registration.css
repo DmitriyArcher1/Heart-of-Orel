@@ -132,3 +132,10 @@ input[type="password"]:focus {
 .error {
     background-color: #992f27; /* Красный */
 }
+
+
+@media (max-width: 600px) {
+    .registration-container {
+        width: 290px;
+    }
+}

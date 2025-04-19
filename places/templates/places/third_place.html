@@ -123,7 +123,7 @@
             <div class="inner animation">
                 
                 <header class="align-center animation">
-                    <h2><span class="navigate_place">Фотографии</span></h2>
+                    <h2><span class="navigate_place" style="font-weight: 900; color: #fff;">Фотографии</span></h2>
                 </header>
 
                 <div class="container">
@@ -156,12 +156,12 @@
             </div>
         </section>
 
-
+        <!-- Четвёртая секция -->
         <section id="four" class="wrapper style2">
             <div class="inner">
                 <div class="content">
                     <ul class="info-text">
-                        <h2 class="animation"><li>Историческое место
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Историческое место
                             <i class="fa-solid fa-book"></i>
                         </li></h2>
                     </ul>
@@ -169,7 +169,7 @@
                     <hr>
 
                     <ul class="info-text">
-                        <h2 class="animation"><li>Имеет оценку 4,3
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Имеет оценку 4,3
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
                             <i class="fa-solid fa-star"></i> 
@@ -181,7 +181,7 @@
                     <hr>
 
                     <ul class="info-text">
-                        <h2 class="animation"><li>Недалеко от города
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Недалеко от города
                             <i class="fa-solid fa-building"></i>
                         </li></h2>
                     </ul>
@@ -189,7 +189,7 @@
                     <hr>
 
                     <ul class="info-text">
-                        <h2 class="animation"><li>Известное место среди орловчан
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Известное место среди орловчан
                             <i class="fa-solid fa-person"></i>
                         </li></h2>
                     </ul>
@@ -198,12 +198,34 @@
             </div>
         </section>
 
-        
         <!-- Пятая секция -->
+        {% if user.is_authenticated %}
+            <section id="four" class="wrapper style2">
+                <div class="inner2">
+                    <div class="content animation">
+                        {% comment %} <h2 style="text-align: center;"><span class="navigate_place">Написать отзыв</span></h2> {% endcomment %}
+                        <a class="comment-button" href="{% url "comment:third_comments" %}">Написать отзыв</a>
+                    </div>
+                </div>
+            </section>
+        {% else %}
+            <section id="four" class="wrapper style2">
+                <div class="inner2">
+                    <div class="content animation">
+                        {% comment %} <h2 style="text-align: center;"><span class="navigate_place">Написать отзыв</span></h2> {% endcomment %}
+                        <h1 style="color: #fff; cursor: pointer;" class="comment-button" href="{% url "comment:third_comments" %}">Написать отзыв</h1>
+                        <h1 style="color: #fff; font-weight: 900; text-align: center; font-size: 25px;"><span style="color: red;">!</span> Отзывы могут писать только авторизованные пользователи <span style="color: red;">!</span></h1>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+
+        
+        <!-- Шестая секция -->
         <section id="five" class="wrapper style2">
             <div class="inner">
                 <div class="content animation">
-                    <h2 style="text-align: center;"><span class="navigate_place">Расположение</span></h2>
+                    <h2 style="text-align: center; font-weight: 900; color: #fff;" ><span class="navigate_place">Расположение</span></h2>
                 </div>
             </div>
         </section>
