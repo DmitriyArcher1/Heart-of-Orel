@@ -54,7 +54,7 @@
 			<section class="banner full">
 
 				<article>
-					<img src="{% static "images/slide01.jpg" %}" alt="" width="1440" height="961"><div class="inner">
+					<img src="{% static "images/fifth_place_2_bg.png" %}" alt="" width="1440" height="961"><div class="inner">
 						<header>
 							<p>Известное место среди орловчан</p>
 							<h2>Сквер Танкистов</h2>
@@ -62,7 +62,7 @@
 				</article>
 
 				<article>
-					<img src="{% static "images/slide02.jpg" %}" alt="" width="1440" height="961">
+					<img src="{% static "images/sixth_place_bg.png" %}" alt="" width="1440" height="961">
 					<div class="inner">
 						<header>
 							<p>Любимое место детей</p>
@@ -72,7 +72,7 @@
 				</article>
 				
 				<article>
-					<img src="{% static "images/slide03.jpg" %}" alt="" width="1440" height="962">
+					<img src="{% static "images/seventh_place_bg.png" %}" alt="" width="1440" height="962">
 					<div class="inner">
 						<header>
 							<p>Небольшой сквер с памятником...</p>
@@ -82,7 +82,7 @@
 				</article>
 				
 				<article>
-					<img src="{% static "images/slide04.jpg" %}" alt="" width="1440" height="961">
+					<img src="{% static "images/eigth_place_11.png" %}" alt="" width="1440" height="961">
 					<div class="inner">
 						<header>
 							<p>Орловский Гос.Университет</p>
@@ -92,7 +92,7 @@
 				</article>
 				
 				<article>
-					<img src="{% static "images/slide05.jpg" %}" alt="" width="1440" height="962">
+					<img src="{% static "images/nineth_place_bg.png" %}" alt="" width="1440" height="962">
 					<div class="inner">
 						<header>
 							<p>Исторический памятник в...</p>
@@ -102,7 +102,7 @@
 				</article>
 
 				<article>
-					<img src="{% static "images/bg3.png" %}" alt="" width="1440" height="962">
+					<img src="{% static "images/tenth_place_bg.png" %}" alt="" width="1440" height="962">
 					<div class="inner">
 						<header>
 							<p>Памятник Героям Гражданской войны</p>
@@ -121,13 +121,14 @@
 						<div>
 							<div class="box animation">
 								<div class="image fit">
-									<img src="{% static "images/pic02.jpg" %}" alt="" width="600" height="300"></div>
+									<img src="{% static "images/fifth_place.jpg" %}" alt="" width="600" height="300"></div>
 								<div class="content animation">
 									<header class="align-center"><p>Известное место среди орловчан</p>
 										<h2>Сквер Танкистов</h2>
-									</header><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus minus commodi perspiciatis sapiente earum quis quae, adipisci quidem? Iure, nesciunt.</p>
+									</header><p style="text-align: center;">Мемориальный сквер в честь подвига героев — танкистов, первыми ворвавшимися в Орёл при освобождении города от немецких оккупантов. 
+										Расположен в Железнодорожном районе между улицами Московской и Пушкина.</p>
 									<footer class="align-center">
-										<a href="#" class="button alt button-anim">Подробнее <i class="fa-solid fa-angles-right"></i></a>
+										<a href="{% url "places:fifth_place" %}" class="button alt button-anim">Подробнее <i class="fa-solid fa-angles-right"></i></a>
 									</footer>
 								</div>
 							</div>
@@ -136,13 +137,15 @@
 						<div>
 							<div class="box animation">
 								<div class="image fit">
-									<img src="{% static "images/pic03.jpg" %}" alt="" width="600" height="300"></div>
+									<img src="{% static "images/sixth_place_2(index).png" %}" alt="" width="600" height="300"></div>
 								<div class="content animation">
 									<header class="align-center"><p>Любимое место детей</p>
 										<h2>Детский парк</h2>
-									</header><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic corporis id earum ipsam aliquam quas modi voluptatibus aliquid cupiditate!</p>
+									</header><p style="text-align: center;">Детский парк это — комплексное, многофункциональное учреждение культуры, которое организует культурно-досуговую и 
+										физкультурно-оздоровительную работу среди населения.
+										</p>
 									<footer class="align-center">
-										<a href="#" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
+										<a href="{% url "places:sixth_place" %}" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
 									</footer>
 								</div>
 							</div>
@@ -151,13 +154,14 @@
 						<div>
 							<div class="box animation">
 								<div class="image fit">
-									<img src="{% static "images/pic03.jpg" %}" alt="" width="600" height="300"></div>
+									<img src="{% static "images/seventh_place_bg_1(index).png" %}" alt="" width="600" height="300"></div>
 								<div class="content animation">
 									<header class="align-center"><p>Небольшой сквер с памятником герою Великой Отечественной войны генерал-майору Леонтию Гуртьеву.</p>
 										<h2>Сквер Гуртьева</h2>
-									</header><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic corporis id earum ipsam aliquam quas modi voluptatibus aliquid cupiditate!</p>
+									</header><p style="text-align: center;">Памятник Л. Н. Гуртьеву — памятник Герою Советского Союза советскому военачальнику, погибшему при освобождении 
+										города Орла от немецко-фашистских захватчиков.</p>
 									<footer class="align-center">
-										<a href="#" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
+										<a href="{% url "places:seventh_place" %}" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
 									</footer>
 								</div>
 							</div>
@@ -166,13 +170,15 @@
 						<div>
 							<div class="box animation">
 								<div class="image fit">
-									<img src="{% static "images/pic03.jpg" %}" alt="" width="600" height="300"></div>
+									<img src="{% static "images/eigth_place_1(index).png" %}" alt="" width="600" height="300"></div>
 								<div class="content animation">
 									<header class="align-center"><p>Орловский Государственный Университет. Главный во всей области. Имеет в своих владениях огромную библиотеку.</p>
 										<h2>ОГУ</h2>
-									</header><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic corporis id earum ipsam aliquam quas modi voluptatibus aliquid cupiditate!</p>
+									</header><p style="text-align: center;">Орло́вский госуда́рственный университе́т имени И. С. Тургенева (ОГУ) — высшее учебное заведение в городе Орле и Орловской области. Один из региональных опорных университетов.
+										23 июня 1919 года коллегия высших учебных заведений Народного комиссариата по просвещению приняла решение об образовании Орловского пролетарского университета.
+									</p>
 									<footer class="align-center">
-										<a href="#" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
+										<a href="{% url "places:eigth_place" %}" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
 									</footer>
 								</div>
 							</div>
@@ -181,13 +187,13 @@
 						<div>
 							<div class="box animation">
 								<div class="image fit">
-									<img src="{% static "images/pic03.jpg" %}" alt="" width="600" height="300"></div>
+									<img src="{% static "images/nineth_place_1(index).png" %}" alt="" width="600" height="300"></div>
 								<div class="content animation">
 									<header class="align-center"><p>Исторический памятник знаменитому Ивану Грозному, который расположен возле Детского Парка.</p>
 										<h2>Памятник Ивану Грозному</h2>
-									</header><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic corporis id earum ipsam aliquam quas modi voluptatibus aliquid cupiditate!</p>
+									</header><p style="text-align: center;">Памятник расположен на набережной близ Богоявленского собора, недалеко от слияния рек Оки и Орлика, где в 1566 году по указу царя Ивана IV была основана крепость Орёл.</p>
 									<footer class="align-center">
-										<a href="#" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
+										<a href="{% url "places:nineth_place" %}" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
 									</footer>
 								</div>
 							</div>
@@ -196,13 +202,13 @@
 						<div>
 							<div class="box animation">
 								<div class="image fit">
-									<img src="{% static "images/pic03.jpg" %}" alt="" width="600" height="300"></div>
+									<img src="{% static "images/tenth_place_1.png" %}" alt="" width="600" height="300"></div>
 								<div class="content animation">
 									<header class="align-center"><p>Памятник установлен в 1976-м году в...</p>
 										<h2>Памятник Героям Гражданской войны</h2>
-									</header><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum hic corporis id earum ipsam aliquam quas modi voluptatibus aliquid cupiditate!</p>
+									</header><p style="text-align: center;">Девушка в буденовке, в шинели и тяжелых сапогах — чтобы подчеркнуть хрупкость героини — символ жертвенности, подвига, надежды и новой жизни.</p>
 									<footer class="align-center">
-										<a href="#" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
+										<a href="{% url "places:tenth_place" %}" class="button alt">Подробнее <i class="fa-solid fa-angles-right"></i></a>
 									</footer>
 								</div>
 							</div>
@@ -213,11 +219,11 @@
 			</section>
 
 			<!-- Two -->
-			 <section id="two" class="wrapper style3">
+			 <section id="two" class="wrapper style15">
 				<div class="inner animation">
 					<header class="align-center">
 						<p>Heart Of Orel</p>
-						<h2>Эти места знает почти каждый орловчанин!<br>А теперь посмотрите галерею из фотографий этих замечательных мест</h2>
+						<h2 style="font-weight: 900; color: #fff;">А теперь посмотрите галерею из фотографий этих замечательных мест</h2>
 					</header>
 				</div>
 			</section>
@@ -232,32 +238,72 @@
 					<div class="gallery">
 						<div>
 							<div class="image fit animation">
-								<a href="#"><img src="{% static "images/pic01.jpg" %}" alt="" width="600" height="300"></a>
+								<a href="#"><img src="{% static "images/sixth_place_2.png" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit animation">
-								<a href="#"><img src="{% static "images/pic02.jpg" %}" alt="" width="600" height="300"></a>
+								<a href="#"><img src="{% static "images/seventh_place_2.png" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit animation">
-								<a href="#"><img src="{% static "images/pic03.jpg" %}" alt="" width="600" height="300"></a>
+								<a href="#"><img src="{% static "images/sixth_place_1.png" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit animation">
-								<a href="#"><img src="{% static "images/pic04.jpg" %}" alt="" width="600" height="300"></a>
+								<a href="#"><img src="{% static "images/seventh_place_bg_1.png" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit animation">
-								<a href="#"><img src="{% static "images/bg2.png" %}" alt="" width="600" height="300"></a>
+								<a href="#"><img src="{% static "images/nineth_place_1.png" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit animation">
-								<a href="#"><img src="{% static "images/bg3.png" %}" alt="" width="600" height="300"></a>
+								<a href="#"><img src="{% static "images/fifth_place_2.jpg" %}" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit animation">
+								<a href="#"><img src="{% static "images/first_place_1.jpg" %}" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit animation">
+								<a href="#"><img src="{% static "images/seventh_place_4.png" %}" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit animation">
+								<a href="#"><img src="{% static "images/sixth_place_4.png" %}" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit animation">
+								<a href="#"><img src="{% static "images/third_place_1.jpg" %}" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit animation">
+								<a href="#"><img src="{% static "images/eigth_place_3.png" %}" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit animation">
+								<a href="#"><img src="{% static "images/eigth_place_1.png" %}" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit animation">
+								<a href="#"><img src="{% static "images/seventh_place_3.png" %}" alt="" width="600" height="300"></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit animation">
+								<a href="#"><img src="{% static "images/fourth_place_2.jpg" %}" alt="" width="600" height="300"></a>
 							</div>
 						</div>
 					</div>

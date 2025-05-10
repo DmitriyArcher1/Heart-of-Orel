@@ -1,0 +1,274 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+
+        <!-- Таблица стилей -->
+        <link rel="stylesheet" href="{% static "css/main.css" %}">
+        <link rel="stylesheet" href="{% static "css/unknown-places.css" %}">
+
+        <!-- Иконка -->
+        <link rel="icon" href="{% static "icons/icon6.png" %}">
+
+        <!-- Шрифт -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body class="subpage">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <a href="{% url "main:index" %}">Heart Of Orel</a>
+            </div>
+            
+            <a href="#menu">Меню</a>
+        </header>
+
+        <!-- Меню -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="{% url "main:index" %}"><i class="fa-solid fa-house"></i>   Главная</a></li>
+                <li><a href="{% url "about:about" %}"><i class="fa-solid fa-user"></i>   О нас</a></li>
+                <li><a href="{% url "places:places" %}"><i class="fa-solid fa-map-location"></i>    Малоизвестные места</a></li>
+
+                {% if user.is_admin or user.is_staff %}
+                    <li><a href="{% url "admin:index" %}"><i class="fa-solid fa-screwdriver-wrench"></i>    Админ панель</a></li>
+                {% endif %}
+
+                {% if not user.is_authenticated %}
+                    <li><a href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i>    Войти</a></li>
+                {% else %}
+                    <li><a href="{% url "users:profile" %}"><i class="fa-solid fa-user"></i>    Профиль</a></li>
+                    <li><a href="{% url "users:logout" %}"><i class="fa-solid fa-person-running"></i>    Выйти из аккаунта</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+
+        <!-- Первая секция -->
+        <section id="One" class="wrapper style14">
+            <div class="inner">
+                <header class="align-center">
+                    <p>Heart Of Orel</p>
+                    <h2 class="place-title">Памятник Героям Гражданской Войны</h2>
+                </header>
+            </div>
+        </section>
+
+        <!-- Вторая секция -->
+        <section id="two" class="wrapper style2">
+            <div class="inner">
+                <div class="box animation">
+                    <div class="content animation">
+
+                        <header class="align-center animation">
+                            <p>Достопримечательность</p>
+                            <h2>Подробная информация</h2>
+                        </header>
+
+                        <p>
+                            <b>Всем в Орле известен памятник героям Гражданской войны</b> или как его называют в обиходе — <b>«Каховка»</b>. Девушка в буденовке, в шинели и 
+                            тяжелых сапогах — чтобы подчеркнуть хрупкость героини — символ жертвенности, подвига, надежды и новой жизни. Красивый памятник, в правильно 
+                            подобранном месте — очень удачный монументальный акцент.
+                            Неофициальное название объясняется строкой из одноименной <b>песни</b>: И девушка наша в походной шинели / Горящей Каховкой идёт. Каховка — женского 
+                            рода и героиня — девушка. Народное название прижилось. Подкачало только окружающее пространство. Территория вокруг памятников обычно облагорожена.
+                            Применительно к Каховке этого не скажешь.
+                            Орловское областное отделение «Всероссийского общества охраны памятников истории и культуры» решило ситуацию исправить. Пространство, 
+                            ограниченное улицей Брестской, переулком Георгиевским и <b>улицей 7 Ноября</b>, где стоит памятник Героям Гражданской войны, оказалось без названия. 
+                            Если придать этому месту статус площади, тогда его с полным основанием можно будет предлагать в качестве кандидата на благоустройство. 
+                            Такая была идея.
+                            Хотя непонятно, что мешает благоустраивать просто <i>«территорию вокруг памятника Героям Гражданской войны, ограниченную улицами Брестской, 
+                            7-го Ноября и Георгиевским переулком».</i> Заблудиться сложно. Но «ВООПиК» пошел другим путем. Эта простая инициатива обросла большим количеством 
+                            любопытных подробностей.
+                            Процедура такая: предложение по созданию (формальному) новой площади сначала рассматривает Орловская городская комиссия по наименованию, 
+                            переименованию улиц и установке объектов монументального искусства, затем вопрос изучает горсовет (первым делом — в профильном комитете), 
+                            после чего на сессии выносится решение — быть площади или не быть, а если быть, то в каком виде.
+                            И вот тут начинается очень интересная история. Нелюбителям длинных текстов просьба запастись терпением, поскольку без цитат не обойтись.
+						</p>
+
+                        <p>
+                            Впервые этой темой комиссия по наименованиям и переименованиям (назовем ее так для краткости) занялась летом прошлого года. И постановила: 
+                            <b>площади быть.</b> Определились и с названием — <b>«Площадь Героев Гражданской войны».</b> Вариант «Площадь Героев» (для краткости) был членами комиссии 
+                            совершенно справедливо отвергнут, поскольку «просто Герои» обезличены. В самом деле, герои труда — это тоже герои. Решение комиссии, 
+                            единогласно утвердившей площадь Героев Гражданской войны, ушло в горсовет. Но ушло с одним интересным пунктом: <i>«… с условием установки в 
+                            обязательном порядке памятных досок с указанием воинских частей соединений, воевавших в Гражданской войне с той и другой стороны».</i>
+                            К этому интересному предложению мы еще вернемся.
+                            Дело за малым — <b>рассмотреть решение,</b> однако (цитата из протокола заседания комиссии по наименованиям и переименованиям) <i>«…вопрос о 
+                            присвоении наименования «площадь Героев Гражданской войны» не был вынесен для рассмотрения на заседание Орловского городского Совета народных 
+                            депутатов, документы были возвращены в комиссию для дополнительного обсуждения наименования территории, так как данное наименование вызвало 
+                            значительный общественный резонанс при обсуждении вопроса на 43-м заседании комитета по образованию, культуре и социальной политике Орловского 
+                            городского Совета…».</i>
+                            Почему «Герои гражданской войны» вызвали «значительный общественный резонанс» в комитете по образованию, культуре и социальной политике 
+                            Орловского городского Совета — вопрос. Возможно, члены комитета просто не знали, что привычная Каховка правильно называется «памятником 
+                            Героям Гражданской войны», а узнав, были шокированы новым знанием и решили не усугублять шок дублированием наименования. Но Гражданская война 
+                            была. А ее героям в Орле стоит памятник, причем давно. Что тут страшного?
+                            Как бы там ни было, Орловской комиссии по наименованиям и переименованиям пришлось собираться вновь в <b>феврале 2024 года.</b>
+                            И, о чудо! Та же комиссия вновь единогласно утвердила прежде ею же отвергнутое название «площадь Героев», пояснив, что так лаконичней. 
+                            К тому же (цитата) предложение вносится «…<i>с учетом практики других регионов в отношении исторически спорных объектов».
+                            Гибкость — <b>это безусловно замечательное качество,</b> особенно в таких видах спорта как гимнастика и акробатика. Но и в других видах жизнедеятельности
+                            она также бывает полезной, даже не будем с этим спорить. Поговорим о другом.
+                            Скажите, а в чем спорность памятника героям Гражданской войны? Победа Красной армии и Советской власти в Гражданской войне как в России, 
+                            так и в Орле в частности — бесспорный исторический факт. Другое дело, если этот факт кому-то не нравится и его хочется оспорить. 
+                            Но инфантильный либерализм и личные исторические предпочтения нужно оставлять для домашнего пользования — приговор истории пересмотру не подлежит.
+                            В противном случае все оказываются на исходных позициях, и тогда события многолетней давности, но в новом антураже повторяются.
+                            Теперь о досках «с указанием воинских частей соединений, воевавших в Гражданской войне с той и другой стороны»</i>. Не знаю, заметили ли члены 
+                            комиссии по наименованиям и переименованиям эту особенность Каховки, но на пьедестале девушка в буденовке не обнимается с корниловцем. 
+                            <b>В 70-е,</b> когда монумент поставили, не было сомнений, каким героям он посвящен.
+                        </p>
+
+                        <p>
+                            
+                        </p>
+                            
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Третья секция -->
+        <section id="three" class="wrapper style2">
+            <div class="inner animation">
+                
+                <header class="align-center animation">
+                    <h2><span class="navigate_place" style="font-weight: 900; color: #fff;">Фотографии</span></h2>
+                </header>
+
+                <div class="container">
+
+                    <div>
+                        <div class="image fit animation">
+                            <img class="thumbnail" src="{% static "images/tenth_place_1.png" %}" alt="Картинка 1" width="600" height="300">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="image fit animation">
+                            <img class="thumbnail" src="{% static "images/tenth_place_2.png" %}" alt="Картинка 2" width="600" height="300">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="image fit animation">
+                            <img class="thumbnail" src="{% static "images/tenth_place_3.png" %}" alt="Картинка 3" width="600" height="300">
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- Четвёртая секция -->
+        <section id="four" class="wrapper style2">
+            <div class="inner">
+                <div class="content">
+                    <ul class="info-text">
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Всеми известный памятник
+                            <i class="fa-solid fa-person"></i>
+                        </li></h2>
+                        <hr class="animation" size="2" width="100%">
+
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>В центре города
+                            <i class="fa-solid fa-building-wheat"></i>
+                        </li></h2>
+                        <hr class="animation">
+
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>С оценкой 4.0 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </li></h2>
+                        <hr class="animation">
+
+                        <h2 class="animation" style="font-weight: 900; color: #fff;"><li>Вблизи Атолла
+                            <i class="fa-solid fa-arrow-right-to-city"></i>
+                        </li></h2>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Пятая секция -->
+
+        {% if user.is_authenticated %}
+            <section id="four" class="wrapper style2">
+                <div class="inner2">
+                    <div class="content animation">
+                        {% comment %} <h2 style="text-align: center;"><span class="navigate_place">Написать отзыв</span></h2> {% endcomment %}
+                        <a class="comment-button" href="{% url "comment:tenth_comments" %}">Написать отзыв</a>
+                    </div>
+                </div>
+            </section>
+        {% else %}
+            <section id="four" class="wrapper style2">
+                <div class="inner2">
+                    <div class="content animation">
+                        {% comment %} <h2 style="text-align: center;"><span class="navigate_place">Написать отзыв</span></h2> {% endcomment %}
+                        <h1 style="color: #fff; cursor: pointer;" class="comment-button" href="#">Написать отзыв</h1>
+                        <h1 style="color: #fff; font-weight: 900; text-align: center; font-size: 25px;"><span style="color: red;">!</span> Отзывы могут писать только авторизованные пользователи <span style="color: red;">!</span></h1>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        
+
+        
+        <!-- Шестая секция -->
+        <section id="four" class="wrapper style2">
+            <div class="inner">
+                <div class="content animation">
+                    <h2 style="text-align: center; font-weight: 900; color: #fff;"><span class="navigate_place">Расположение</span></h2>
+                </div>
+            </div>
+        </section>
+
+        <center class="animation">
+            <iframe style="display: flex; justify-content: center; width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2403.0002356211203!2d36.061288458589694!3d52.96641016375736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x413211bd0142ab1d%3A0xf70be5f3a005dc3f!2z0J_QsNC80Y_RgtC90LjQuiDQs9C10YDQvtGP0Lwg0LPRgNCw0LbQtNCw0L3RgdC60L7QuSDQstC-0LnQvdGL!5e0!3m2!1sru!2sru!4v1746900621292!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </center>
+
+        <!-- Footer -->
+		<footer id="footer">
+            <div class="container">
+                <ul class="icons">
+                    {% comment %} <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li> {% endcomment %}
+                    <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+        </footer>
+        
+        <div class="copyright">
+            Сайт разработали: <br> 
+            Apex Team<br>
+            {% comment %} <hr style="border: 1px solid #0c000c; width: 50%; margin: 20px 25% 20px 25%;"> {% endcomment %}
+            &copy; 2025 Все права защищены.
+        </div>
+
+        <!-- Scripts -->
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/jquery.scrollex.min.js" %}"></script>
+		<script src="{% static "js/skel.min.js" %}"></script>
+		<script src="{% static "js/util.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+        <script src="{% static "js/animation.js" %}"></script>
+        <script src="{% static "js/modal_window.js" %}"></script>
+		<script src="https://kit.fontawesome.com/c6ba37b0b2.js" crossorigin="anonymous"></script>
+
+    
+    </body>
+
+</html>

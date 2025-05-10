@@ -1,6 +1,6 @@
 from django import forms
 
-from comment.models import Comment, SecondComment, ThirdComment, FourthComment
+from comment.models import *
 
 class CommentForm(forms.Form):
 
@@ -45,6 +45,78 @@ class FourthCommentForm(forms.Form):
         fields = (
            'text',
            'author',
+        )
+
+    text = forms.CharField()
+    author = forms.CharField()
+
+class FifthCommentForm(forms.Form):
+
+    class Meta:
+        model = FifthComment()
+        fields = (
+            'text',
+            'author',
+        )
+
+    text = forms.CharField()
+    author = forms.CharField()
+
+class SixthCommentForm(forms.Form):
+
+    class Meta:
+        model = SixthComment()
+        fields = (
+            'text',
+            'author',
+        )
+    
+    text = forms.CharField()
+    author = forms.CharField()
+
+class SeventhCommentForm(forms.Form):
+
+    class Meta:
+        model = SeventhComment()
+        fields = (
+            'text',
+            'author',
+        )
+
+    text = forms.CharField()
+    author = forms.CharField()
+
+class EigthCommentForm(forms.Form):
+
+    class Meta:
+        model = EigthComment()
+        fields = (
+            'text',
+            'author',
+        )
+
+    text = forms.CharField()
+    author = forms.CharField()
+
+class NinethCommentForm(forms.Form):
+
+    class Meta:
+        model = NinethComment()
+        fields = (
+            'text',
+            'author',
+        )
+
+    text = forms.CharField()
+    author = forms.CharField()
+
+class TenthCommentForm(forms.Form):
+    
+    class Meta:
+        model = TenthComment()
+        fields = (
+            'text',
+            'author',
         )
 
     text = forms.CharField()

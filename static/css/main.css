@@ -3167,6 +3167,136 @@
 			position: relative;
 		}
 
+		.wrapper.style8 {
+			background-color: #5c5b5b;
+			color: #bfbfbf;
+			background-image: url(../images/sixth_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+		.wrapper.style9 {
+			background-color: #5c5b5b;
+			color: #bfbfbf;
+			background-image: url(../images/fifth_place_2_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style10 {
+			background-color: #5c5b5b;
+			color: #bfbfbf;
+			background-image: url(../images/seventh_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style11 {
+			background-color: #5c5b5b;
+			color: #bfbfbf;
+			background-image: url(../images/fifth_place_2_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style12 {
+			background-color: #5c5b5b;
+			color: #bfbfbf;
+			background-image: url(../images/eigth_place_11.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style13 {
+			background-color: #5c5b5b;
+			color: #bfbfbf;
+			background-image: url(../images/nineth_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style14 {
+			background-color: #5c5b5b;
+			color: #bfbfbf;
+			background-image: url(../images/tenth_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		/* Задние фоны для других страниц */
+		.wrapper.style15 {
+			background-color: #000;
+			color: #bfbfbf;
+			background-image: url(/static/images/fifth_place_2_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style16 {
+			background-color: #000;
+			color: #bfbfbf;
+			background-image: url(/static/images/nineth_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style17 {
+			background-color: #000;
+			color: #bfbfbf;
+			background-image: url(/static/images/first_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style18 {
+			background-color: #000;
+			color: #bfbfbf;
+			background-image: url(/static/images/second_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style19 {
+			background-color: #000;
+			color: #bfbfbf;
+			background-image: url(/static/images/third_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
+		.wrapper.style20 {
+			background-color: #000;
+			color: #bfbfbf;
+			background-image: url(/static/images/fourth_place_bg.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: relative;
+		}
+
 			.wrapper.style3 input, .wrapper.style3 select, .wrapper.style3 textarea {
 				color: #ffffff;
 			}
