@@ -28,7 +28,7 @@ body {
 }
 
 .title:hover {
-    color:#23477e;
+    color:#5c0ccb;
     cursor: pointer;
 }
 
@@ -69,7 +69,7 @@ input[type="password"]:focus {
 }
 
 .btn {
-    background-color: #23477e;
+    background-color: #5c0ccb;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -81,7 +81,7 @@ input[type="password"]:focus {
 }
 
 .btn:hover {
-    background-color: #051330;
+    background-color: #2f0b61;
 }
 
 .error-message {

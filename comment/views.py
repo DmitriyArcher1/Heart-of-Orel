@@ -32,6 +32,7 @@ def first_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedir
 
             comment = Comment(text = text, author = request.user)
             comment.save()
+            # messages.success(request, "Комментарий добавлен")
 
             return redirect(reverse('comment:first_comments'))
         else:

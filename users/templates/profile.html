@@ -76,7 +76,9 @@
                         {% endif %}
 
                         <div class="avatar-container">
-                            <label for="id_image" class="avatar-upload-button">Изменить аватар</label>
+                            <label for="id_image" class="avatar-upload-button">Изменить аватар
+                                <i class="fa-solid fa-user-tie"></i>
+                            </label>
                             <input type="file" 
                                 id="id_image" 
                                 name="image"
@@ -141,8 +143,18 @@
                                 <span class="error-message" id="email-error">{{ form.email.errors }}</span>
                             {% endif %}
                     </div>
+                    
+                    <div style="display: flex; justify-content: space-between;">
+                        <button type="submit" class="save-button">Сохранить изменения
+                            <i class="fa-solid fa-download"></i>
+                        </button>
 
-                    <button type="submit" class="save-button">Сохранить изменения</button>
+                        <a class="logout-button" href="{% url "users:logout" %}">
+                            Выйти из аккаунта
+                            <i class="fa-solid fa-person-running"></i>
+                        </a>
+                    </div>
+                    
                 </form>
             </div>
         </div>

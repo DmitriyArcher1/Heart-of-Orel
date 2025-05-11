@@ -34,7 +34,7 @@ body {
     font-size: 40px;
     text-decoration: none;
     color: #fff;
-    background-color: #5c0ccb;
+    background-color: #da70d6;
     border-radius: 40px;
     font-weight: 900;
 
@@ -42,5 +42,5 @@ body {
 }
 
 .comment-button:hover {
-    background-color: #2f0b61;
+    background-color: #8b4989;
 }

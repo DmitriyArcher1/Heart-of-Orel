@@ -31,7 +31,7 @@ body {
 }
 
 .title_site:hover {
-    color: #007bff;
+    color: #5c0ccb;
 }
 
 .profile-card {
@@ -63,16 +63,16 @@ body {
 }
 
 .avatar-upload-button {
-    background-color: #23477e;
+    background-color: #5c0ccb;
     color: white;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .avatar-upload-button:hover {
-    background-color: #051330;
+    background-color: #2f0b61;
 }
 
 .profile-info {
@@ -108,11 +108,11 @@ body {
 }
 
 .save-button {
-    background-color: #23477e;
+    background-color: #5c0ccb;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 17px;
 
@@ -120,7 +120,24 @@ body {
 }
 
 .save-button:hover {
-    background-color: #051330;
+    background-color: #2f0b61;
+}
+
+.logout-button {
+    background-color: #5c0ccb;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #2f0b61;
 }
 
 .error-message {

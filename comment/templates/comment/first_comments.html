@@ -56,11 +56,11 @@
         </nav>
 
         <!-- Первая секция -->
-        <section id="One" class="wrapper style4">
+        <section id="One" class="wrapper style17">
             <div class="inner">
                 <header class="align-center">
                     <p>Heart Of Orel</p>
-                    <h1 class="place-title">Отзывы</h1>
+                    <h1 class="place-title">Комментарии</h1>
                     <h2 class="place-title" style="font-size: 40px;font-weight: 800;color: #f0c9ff">Памятник танкистам</h2>
                 </header>
             </div>
@@ -70,8 +70,8 @@
         <section id="two" class="wrapper style2">
             <div class="inner">
                 <header class="align-center">
-                    <h2 style="color: #fff; font-weight: 900; font-size: 45px;">Оставить комментарий</h2>
-                    <p style="color: #fff; font-weight: 900; font-size: 25px;">Поделитесь своим мнением о памятнике!</p>
+                    <h2 style="color: #fff; font-weight: 900; font-size: 45px;">Поделитесь своим мнением о памятнике!</h2>
+                    {% comment %} <p style="color: #fff; font-weight: 900; font-size: 25px;">Поделитесь своим мнением о памятнике!</p> {% endcomment %}
                 </header>
         
                 <div class="form-wrapper">
@@ -108,7 +108,7 @@
                             </div>
 
                             <div class="col-12">
-                                <textarea name="text" id="id_text" required placeholder="Ваш комментарий" rows="6"></textarea>
+                                <textarea name="text" id="id_text" required placeholder="Ваш комментарий..." rows="6"></textarea>
                             </div>
                             <div class="col-12">
                                 <ul class="actions">
@@ -200,6 +200,7 @@
 		<script src="{% static "js/main.js" %}"></script>
         <script src="{% static "js/animation.js" %}"></script>
         <script src="{% static "js/modal_window.js" %}"></script>
+        {% comment %} <script src="{% static "js/message.js" %}"></script> {% endcomment %}
 		<script src="https://kit.fontawesome.com/c6ba37b0b2.js" crossorigin="anonymous"></script>
 
     

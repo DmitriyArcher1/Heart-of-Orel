@@ -30,7 +30,7 @@ body {
 }
 
 .title:hover {
-    color:#23477e;
+    color:#5c0ccb;;
     cursor: pointer;
 }
 
@@ -70,7 +70,7 @@ input[type="password"]:focus {
 }
 
 .btn {
-    background-color: #23477e;
+    background-color: #5c0ccb;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -82,7 +82,7 @@ input[type="password"]:focus {
 }
 
 .btn:hover {
-    background-color: #051330;
+    background-color: #2f0b61;
 }
 
 .error-message {
@@ -107,8 +107,8 @@ input[type="password"]:focus {
 
 .button_signup a {
     text-decoration: none;
-    color: #23477e;
-    border: 2px solid #23477e;
+    color: #5c0ccb;
+    border: 2px solid #5c0ccb;
     padding: 5px 20px;
     font-size: 18px;
 
@@ -116,7 +116,7 @@ input[type="password"]:focus {
 }
 
 .button_signup a:hover {
-    background-color: #23477e;
+    background-color: #5c0ccb;
     color: #fff;
 }
 

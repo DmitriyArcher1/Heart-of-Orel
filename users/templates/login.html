@@ -57,10 +57,14 @@
                     required>
             </div>
 
-            <button type="submit" class="btn">Войти</button>
+            <button type="submit" class="btn">Войти
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
 
             <div class="button_signup">
-                <a href="{% url "users:registration" %}">Создать аккаунт</a>
+                <a href="{% url "users:registration" %}">Создать аккаунт
+                    <i class="fa-solid fa-user"></i>
+                </a>
             </div>
         </form>
 
@@ -71,6 +75,6 @@
     
     {% comment %} <script src="{% static "js/login.js" %}"></script> {% endcomment %}
     <script src="{% static "js/message.js" %}"></script>
-    
+    <script src="https://kit.fontawesome.com/c6ba37b0b2.js" crossorigin="anonymous"></script>
 </body>
 </html>
