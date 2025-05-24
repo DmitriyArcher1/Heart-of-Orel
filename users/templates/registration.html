@@ -23,10 +23,36 @@
 </head>
 
     <body>
+
+    <!-- Header -->
+    <header id="header"><div class="logo"><a href="{% url "main:index" %}">Heart Of Orel</a></div>
+        <a href="#menu">Меню</a>
+    </header>
+    
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="{% url "main:index" %}"><i class="fa-solid fa-house"></i>   Главная</a></li>
+            <li><a href="{% url "about:about" %}"><i class="fa-solid fa-user"></i>   О нас</a></li>
+            <li><a href="{% url "places:places" %}"><i class="fa-solid fa-map-location"></i>    Малоизвестные места</a></li>
+
+            {% if user.is_admin or user.is_staff %}
+                <li><a href="{% url "admin:index" %}"><i class="fa-solid fa-screwdriver-wrench"></i>    Админ панель</a></li>
+            {% endif %}
+
+            {% if not user.is_authenticated %}
+                {% comment %} <li><a href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i>    Войти</a></li> {% endcomment %}
+            {% else %}
+                {% comment %} <li><a href="{% url "users:profile" %}"><i class="fa-solid fa-user"></i>    Профиль</a></li> {% endcomment %}
+                {% comment %} <li><a href="{% url "users:logout" %}"><i class="fa-solid fa-person-running"></i>    Выйти из аккаунта</a></li> {% endcomment %}
+            {% endif %}
+
+        </ul>
+    </nav>
         
         <div class="registration-container">
-            <a href="{% url "main:index" %}" class="title">Heart Of Orel</a>
-            <h2>Регистрация</h2>
+            {% comment %} <a href="{% url "main:index" %}" class="title">Heart Of Orel</a> {% endcomment %}
+            <h1 class="sub_title" style="font-size: 35px;">Регистрация</h1>
             <form id="registration-form" action="{% url "users:registration" %}" method="post">
                 
                 {% csrf_token %}
@@ -123,9 +149,16 @@
     
     
         {% comment %} <script src="script.js"></script> {% endcomment %}
+        <script src="{% static "js/jquery.min.js" %}"></script>
+        <script src="{% static "js/jquery.scrollex.min.js" %}"></script>
+        <script src="{% static "js/skel.min.js" %}"></script>
+        <script src="{% static "js/util.js" %}"></script>
+        <script src="{% static "js/main.js" %}"></script>
+        <script src="{% static "js/animation.js" %}"></script>
         <script src="{% static "js/message.js" %}"></script>
         <script src="https://kit.fontawesome.com/c6ba37b0b2.js" crossorigin="anonymous"></script>
-
+        <script src="{% static "js/profile.js" %}"></script>
+        <script src="{% static "js/message.js" %}"></script>
     </body>
 
 

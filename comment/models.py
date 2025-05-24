@@ -4,6 +4,10 @@ from django.template.defaulttags import verbatim
 
 from users.models import User
 
+
+# --------------------------------------------------------------------------------------------------------------------
+# Модели в БД для комментариев под каждое из мест
+# --------------------------------------------------------------------------------------------------------------------
 class Comment(models.Model):
     text = models.TextField(verbose_name = 'Комментарий')
     author = models.ForeignKey(User, on_delete = models.CASCADE, verbose_name = 'Автор')
@@ -214,3 +218,4 @@ class TenthComment(models.Model):
     
     def __str__(self):
         return f"Комментарий от - {self.author}"
+# --------------------------------------------------------------------------------------------------------------------
