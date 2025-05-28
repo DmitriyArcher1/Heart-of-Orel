@@ -49,7 +49,7 @@
                     <li><a href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i>    Войти</a></li>
                 {% else %}
                     <li><a href="{% url "users:profile" %}"><i class="fa-solid fa-user"></i>    Профиль</a></li>
-                    <li><a href="{% url "users:logout" %}"><i class="fa-solid fa-person-running"></i>    Выйти из аккаунта</a></li>
+                    {% comment %} <li><a href="{% url "users:logout" %}"><i class="fa-solid fa-person-running"></i>    Выйти из аккаунта</a></li> {% endcomment %}
                 {% endif %}
 
             </ul>

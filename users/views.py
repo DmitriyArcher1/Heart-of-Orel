@@ -26,7 +26,7 @@ def login(request) -> HttpResponseRedirect | HttpResponse:
             if user:
                 auth.login(request, user)
                 messages.success(request, f"{username}, Вы успешно вошли в систему")
-                return HttpResponseRedirect(reverse('main:index'))
+                return HttpResponseRedirect(reverse('users:profile'))
     else:
         form = UserLoginForm()
     
@@ -46,7 +46,7 @@ def registration(request) -> HttpResponseRedirect | HttpResponse:
             user = form.instance
             auth.login(request, user)
             messages.success(request, f"{user.username}, Вы успешно зарегистрировались и  вошли в систему")
-            return HttpResponseRedirect(reverse('main:index'))
+            return HttpResponseRedirect(reverse('users:profile'))
     else:
         form = UserRegistrationForm()
 

@@ -6,16 +6,16 @@ app_name = 'comment'
 
 urlpatterns = [
     # -------------------------------------------------------------------------
-    path('first_place/', views.first_comments, name = 'first_comments'),
-    path('second_place/', views.second_comments, name = 'second_comments'),
-    path('third_place/', views.third_comments, name = 'third_comments'),
-    path('fourth_place/', views.fourth_comments, name = 'fourth_comments'),
-    path('fifth_place/', views.fifth_comments, name = 'fifth_comments'),
-    path('sixth_place/', views.sixth_comments, name = 'sixth_comments'),
-    path('seventh_place/', views.seventh_comments, name = 'seventh_comments'),
-    path('eigth_place/', views.eigth_comments, name = 'eigth_comments'),
-    path('nineth_place/', views.nineth_comments, name = 'nineth_comments'),
-    path('tenth_place/', views.tenth_comments, name = 'tenth_comments'),
+    path('monument-to-tankmen/', views.first_comments, name = 'first_comments'),
+    path('khimmashevsky-pond/', views.second_comments, name = 'second_comments'),
+    path('saburovskaya-fortresse/', views.third_comments, name = 'third_comments'),
+    path('river-nepolod/', views.fourth_comments, name = 'fourth_comments'),
+    path('tankers-square/', views.fifth_comments, name = 'fifth_comments'),
+    path('children-park/', views.sixth_comments, name = 'sixth_comments'),
+    path('gurtyev-square/', views.seventh_comments, name = 'seventh_comments'),
+    path('OGU/', views.eigth_comments, name = 'eigth_comments'),
+    path('monument-to-ivan-the-terrible/', views.nineth_comments, name = 'nineth_comments'),
+    path('monument-to-the-heroes-of-the-civil-war/', views.tenth_comments, name = 'tenth_comments'),
     # -------------------------------------------------------------------------
 
 
