@@ -63,6 +63,8 @@ body {
 }
 
 .avatar-upload-button {
+	font-family: 'Montserrat', serif;
+
     background-color: #5c0ccb;
     color: white;
     padding: 10px 15px;
@@ -108,6 +110,8 @@ body {
 }
 
 .save-button {
+	font-family: "Montserrat", serif;
+
     background-color: #5c0ccb;
     color: white;
     padding: 10px 20px;
@@ -155,6 +159,10 @@ body {
     .avatar-container {
         margin-bottom: 20px; /* Добавляем отступ для лучшего отображения */
     }
+
+	.save-button {
+		padding: 10px 5px;
+	}
 }
 
 .message-container {
