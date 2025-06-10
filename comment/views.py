@@ -36,11 +36,11 @@ def first_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedir
 
             return redirect(reverse('comment:first_comments'))
         else:
-            return render(request, 'comment/first_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/first_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
     else:
         form = CommentForm()
-        return render(request, 'comment/first_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/first_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
 
 @login_required
 def second_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -56,11 +56,11 @@ def second_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedi
 
             return redirect(reverse('comment:second_comments'))
         else:
-            return render(request, 'comment/second_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/second_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
     else:
         form = SecondCommentForm()
-        return render(request, 'comment/second_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/second_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
 
 @login_required
 def third_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -76,11 +76,11 @@ def third_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedir
 
             return redirect(reverse('comment:third_comments'))
         else:
-            return render(request, 'comment/third_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/third_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
     else:
         form = ThirdCommentForm()
-        return render(request, 'comment/third_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/third_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
 @login_required
 def fourth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -96,11 +96,11 @@ def fourth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedi
 
             return redirect(reverse('comment:fourth_comments'))
         else:
-            return render(request, 'comment/fourth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/fourth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
     else:
         form = FourthCommentForm()
-        return render(request, 'comment/fourth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/fourth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
 @login_required
 def fifth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -116,11 +116,11 @@ def fifth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedir
 
             return redirect(reverse('comment:fifth_comments'))
         else:
-            return render(request, 'comment/fifth_comment.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/fifth_comment.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
     else:
         form = FifthCommentForm()
-        return render(request, 'comment/fifth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/fifth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
 @login_required
 def sixth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -136,11 +136,11 @@ def sixth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedir
 
             return redirect(reverse('comment:sixth_comments'))
         else:
-            return render(request, 'comment/sixth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/sixth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
     else:
         form = SixthCommentForm()
-        return render(request, 'comment/sixth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/sixth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
 @login_required
 def seventh_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -156,11 +156,11 @@ def seventh_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRed
 
             return redirect(reverse('comment:seventh_comments'))
         else:
-            return render(request, 'comment/seventh_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/seventh_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
     else:
         form = SeventhCommentForm()
-        return render(request, 'comment/seventh_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/seventh_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
 
 @login_required
 def eigth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -176,10 +176,10 @@ def eigth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedir
 
             return redirect(reverse('comment:eigth_comments'))
         else:
-            return render(request, 'comment/eigth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/eigth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     else:
         form = EigthCommentForm()
-        return render(request, 'comment/eigth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/eigth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
 @login_required
 def nineth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -195,10 +195,10 @@ def nineth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedi
 
             return redirect(reverse('comment:nineth_comments'))
         else:
-            return render(request, 'comment/nineth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/nineth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     else:
         form = NinethCommentForm()
-        return render(request, 'comment/nineth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/nineth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
 @login_required
 def tenth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedirect | HttpResponse:
@@ -214,11 +214,11 @@ def tenth_comments(request) -> HttpResponseRedirect | HttpResponsePermanentRedir
 
             return redirect(reverse('comment:tenth_comments'))
         else:
-            return render(request, 'comment/tenth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+            return render(request, 'comment/tenth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
     
     else:
         form = TenthCommentForm()
-        return render(request, 'comment/tenth_comments.html', {'form': form, 'comments': comments, 'title': 'Отзывы', 'user': request.user})
+        return render(request, 'comment/tenth_comments.html', {'form': form, 'comments': comments, 'title': 'Комментарии', 'user': request.user})
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
