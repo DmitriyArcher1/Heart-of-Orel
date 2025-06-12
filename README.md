@@ -14,9 +14,28 @@
 
 <hr>
 <h3> Какие технологии я использовал?</h3>
-<div>
-<img src="images_readme/django.png" width="180">
-</div>
+<h4 align="center">BACKEND</h4>
+
+<b>Django</b>. Замечательный фреймворк для веб-разработки, использующий Python для программирования Backend части проекта.
+
+<img src="images_readme/django.png" width="180"> <br>
+
+<b>Python.</b> Собственно язык программирования, который я использовал с фреймворком Django.
+<img src="images_readme/python.png" width="130">
+
+<b>База данных PostgreSQL.</b> База данных, в которой хранятся все данные: пользователи, комментарии и прочие таблицы, необходимые для работы.
+<img src="images_readme/postgresql.png" width="120">
+
+<h4 align="center">FRONTEND</h4>
+
+<b>HTML5.</b> Язык гипертекстовой разметки, без которого не обходится ни один веб-сайт.
+<img src="images_readme/html.png" width="140">
+
+<b>CSS3.</b> Язык таблицы стилей. Думаю не стоит пояснять, что он делает.
+<img src="images_readme/css.png" width="100">
+
+<b>JavaScript.</b> Ещё один язык программирования, но уже во Frontend. Широко используемый ЯП в веб-разработке.
+<img src="images_readme/js.png" width="120">
 
 
 <div id="header" align="center">
