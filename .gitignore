@@ -11,3 +11,6 @@ cache/
 # django stuff
 db.sqlite3/
 media/
+
+# other directory
+images_readme/
