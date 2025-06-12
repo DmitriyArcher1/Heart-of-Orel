@@ -12,7 +12,6 @@
 :heavy_check_mark: Возможность добавлять и удалять комментарии под каждое место.    
 :heavy_check_mark: Разделение возможностей между пользователями и администраторами.    
 
-<hr>
 <h2>:question: Какие технологии я использовал?</h2>
 <h3 align="center">:star: BACKEND</h3>
 
@@ -41,3 +40,8 @@
 <b>:arrow_forward:JavaScript.</b> Ещё один язык программирования, но уже во Frontend. Широко используемый ЯП в веб-разработке.
 
 <img src="images_readme/js.png" width="120"> <br>
+
+
+<h2>:zap: Дорожная карта проекта</h2>
+
+<img src="images_readme/HOO.png">
