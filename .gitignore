@@ -13,6 +13,9 @@ db.sqlite3/
 media/
 
 # other
-js/
-css/
-html/
+__js__/
+__css__/
+__html__/
+__images__/
+__fonts__/
+__icons__/
