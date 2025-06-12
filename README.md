@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Heart Of Orel Web-Site</h1>
+    <h1><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzh1MTMzcjFrMHYzNXUzMnhzZ25pcW9iNnYwM2JoeHRmeWxpcGx2OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tn33aiTi1jkl6H6/giphy.gif" width="50"> Heart Of Orel Web-Site <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzh1MTMzcjFrMHYzNXUzMnhzZ25pcW9iNnYwM2JoeHRmeWxpcGx2OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tn33aiTi1jkl6H6/giphy.gif" width="50"></h1>
 </div>
 
 <h2> :heart: Общая информация</h2>
