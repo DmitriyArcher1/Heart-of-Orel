@@ -11,3 +11,8 @@ cache/
 # django stuff
 db.sqlite3/
 media/
+
+# other
+js/
+css/
+html/
