@@ -1,44 +1,24 @@
-# Heart Of Orel Web-Site
-___________________________________________________________________________
-[ENG] - This site is dedicated to the sights of the city of Orel, Russian Federation. It will show basic information about them, photographs, etc. Additional additions are expected in the future.
+<div align="center">
+    <h1>Heart Of Orel Web-Site</h1>
+</div>
+<hr>
+<h3>:heart: Общая информация</h3>
+<div>
+    Данный сайт посвящён достопримечательностям города Орла, Российской Федерации. На нём будет показана основная информация о них.
+    Сайт был разработан в виде продукта и практической части курсовой работы "Обучение служением" по дисциплине "Основы российской государственности" на 1 курсе университета. Ниже приведу функции, которые на данный момент доступны на сайте.
 
-Development team: Selin Dmitry, Anisimov Kirill, Grigoryan Mikhail.
+    1. Регистрация, авторизация пользователя.:heavy_check_mark:
+    2. Личный профиль каждого пользователя.:heavy_check_mark:
+    3. Возможность добавлять и удалять комментарии под каждое место.:heavy_check_mark:
+    4. Разделение возможностей между пользователями и администраторами.:heavy_check_mark:
+<div>
+<hr>
+<h3> Какие технологии я использовал?</h3>
+<div>
+Так как Backend я писал на Python 3.11, то конечно использовал фреймворк Django.
+![Alt-текст](https://www.google.com/url?sa=i&url=https%3A%2F%2Fhabr.com%2Fru%2Farticles%2F508100%2F&psig=AOvVaw0l9OhUMkFAkC2Nlyip53LV&ust=1749834899117000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJjPqI6x7I0DFQAAAAAdAAAAABAE)
+</div>
 
-Information collection team: Shokhina Evgenia, Grigoryants Amalia.
-
-We are 1st year students, group 41PIfm (Applied Informatics) of the Faculty of Physics and Mathematics of the Oryol State University named after I.S. Turgenev.
-
-[RUS] - Данный сайт посвящён достопримечательностям города Орла, Российской Федерации. На нём будет показана основная информация о них, фотографии и прочее. Ожидаются дополнения в будущем.
-
-Команда разработки: Селин Дмитрий, Анисимов Кирилл, Григорьян Михаил.
-
-Команда по сбору информации: Шохина Евгения, Григорьянц Амалия.
-
-Мы являемся студентами 1 курса, группы 41ПИфм(Прикладная информатика) физико-математического факультета Орловского государственного университета имени И.С Тургенева.
-
-# EMAIL Селина Дмитрия: d.kartrajt@gmail.com
-# EMAIL Анисимова Кирилла: d.pixelmeerkat@gmail.com
-# EMAIL Григорьяна Михаила: d.mishagreegorian@gmail.com
-________________________________________________________________________________
-
-___Версия 1.0.0 -- Version 1.0.0___
-1. Добавлены две страницы сайта (Главная, О нас).
-2. Добавлены новые записи в базу данных. 
-
-Список небольших изменений на 22.11.2024:
-1) Добавлена новая страница с информацией о малоизвестных местах города Орла.
-2) Исправлен конфликт слияния файлов.
-3) Исправлены баги с некорректным отображением информации на страницах сайта.
-
-Список небольших изменений на 28.11.2024:
-1) На сайте добавлена простая анимация при скролле страницы.
-2) Изменена иконка на вкладке в браузере.
-
-Список небольших изменений на 21.12.2024:
-1) Устранены конфликты слияния файлов в проекте.
-2) Исправлены мелкие баги в скрипте анимации при скролле страницы.
-3) Добавлены карточки малоизвестных мест в городе Орёл.
-4) В боковом меню добавлены три иконки.
 
 <div id="header" align="center">
     <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXFiaXgwdzgwcmlveWc4ZTIxNW5iamViemtiMGYzM21iNjRvODN1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif" width="500" />
