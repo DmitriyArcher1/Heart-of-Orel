@@ -13,8 +13,8 @@
 :heavy_check_mark: Разделение возможностей между пользователями и администраторами.    
 
 <hr>
-<h3> Какие технологии я использовал?</h3>
-<h4 align="center">BACKEND</h4>
+<h2> Какие технологии я использовал?</h2>
+<h3 align="center">BACKEND</h3>
 
 <b>Django</b>. Замечательный фреймворк для веб-разработки, использующий Python для программирования Backend части проекта.
 
@@ -28,7 +28,7 @@
 
 <img src="images_readme/postgresql.png" width="120"> <br>
 
-<h4 align="center">FRONTEND</h4>
+<h3 align="center">FRONTEND</h3>
 
 <b>HTML5.</b> Язык гипертекстовой разметки, без которого не обходится ни один веб-сайт.
 
